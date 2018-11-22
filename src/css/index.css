@@ -1,0 +1,40 @@
+header { border-bottom: 2px solid #F5F5F5; }
+header .h_left { float: left; }
+header .h_left span { line-height: 60px; padding-right: 5px; }
+header .h_left ul { display: inline-block; }
+header .h_left ul li { float: left; margin-right: 8px; }
+header .h_left ul li a { line-height: 60px; color: #777777; }
+header .h_left ul li a:hover { color: #f00; }
+header .h_left ul li:last-child span { font-size: 20px; cursor: pointer; }
+header .h_left ul li:last-child span:first-child:hover { color: #2F97F0; }
+header .h_left ul li:last-child span:last-child:hover { color: #f00; }
+header .h_right { float: right; }
+header .h_right ul li { float: left; margin-right: 16px; line-height: 60px; cursor: pointer; }
+
+nav .n_top .n_left { float: left; }
+nav .n_top .n_left #logo { display: inline-block; width: 225px; height: 100px; text-indent: -9999px; background: transparent url("../img/logo.png") left center no-repeat; margin-right: 170px; }
+nav .n_top .n_middle { margin-top: 30px; }
+nav .n_top .n_middle #n_search { border-radius: 20px; border: 2px solid #2F97F0; padding: 2px; margin-bottom: 2px; }
+nav .n_top .n_middle #n_search input { width: 300px; border: none; line-height: 28px; border-radius: 15px; padding-left: 20px; outline: none; }
+nav .n_top .n_middle #n_search button { border: none; color: #fff; background-color: #2F97F0; line-height: 28px; padding: 0 20px; border-radius: 15px; outline: none; cursor: pointer; }
+nav .n_top .n_middle #n_hot span { float: left; }
+nav .n_top .n_middle #n_hot ul li { float: left; margin-right: 5px; }
+nav .n_top .n_middle #n_hot ul li a { color: #555; }
+nav .n_top .n_middle #n_hot ul li a:hover { color: #f00; }
+nav .n_top .n_right { float: right; }
+nav .n_top .n_right div { display: inline-block; margin-right: 8px; margin-top: 30px; }
+nav .n_top .n_right div a { display: inline-block; padding: 10px; line-height: 20px; background-color: #FAFAFA; color: #777; }
+nav .n_bottom { background-color: #2F97F0; }
+nav .n_bottom ul li { float: left; }
+nav .n_bottom ul li:first-child { background-color: #1280DD; }
+nav .n_bottom ul li:hover { background-color: #1280DD; }
+nav .n_bottom ul li:last-child { float: right; }
+nav .n_bottom ul li:last-child:hover { text-decoration: underline; }
+nav .n_bottom ul li a { line-height: 36px; font-size: 16px; color: #fff; padding: 0 14px; }
+nav .n_bottom ul li a span { display: inline-block; font-size: 20px; line-height: 20px; transform: translate(-4px, 2px); }
+
+article { border-bottom: 30px; }
+article ul li { float: left; }
+article ul li a { display: block; height: 400px; width: 1200px; background: transparent url("../img/banner1.jpg") center top no-repeat; }
+
+/*# sourceMappingURL=index.css.map */
