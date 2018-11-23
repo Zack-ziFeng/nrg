@@ -1,0 +1,21 @@
+main .m_nav { padding: 14px 0; }
+main .m_nav ul { display: inline-block; transform: translateY(2px); }
+main .m_nav ul li { float: left; }
+main .m_nav ul li span { font-size: 12px; }
+main .m_filtrate { background-color: #F7F7F7; border: 1px solid #D7D7D7; margin-bottom: 16px; }
+main .m_filtrate dl dd, main .m_filtrate dl dt { float: left; padding: 10px; border-right: 1px solid #D7D7D7; font-size: 14px; }
+main .m_filtrate dl dd input, main .m_filtrate dl dt input { width: 40px; height: 16px; outline: none; text-align: center; }
+main .m_filtrate dl dd button, main .m_filtrate dl dt button { border: 1px solid #ccc; background-color: transparent; margin-left: 5px; border-radius: 2px; transform: translateY(2px); outline: none; cursor: pointer; }
+main .m_filtrate dl dd { cursor: pointer; }
+main .m_filtrate dl dd:hover { background-color: #fff; color: #26C9FF; }
+main .m_filtrate dl dd:hover .iconfont { color: #f00; }
+main .m_filtrate dl dd:hover button { color: #26C9FF; }
+main .m_filtrate dl dd:hover button:hover { color: #555; }
+main .m_filtrate dl dd:last-child { cursor: default; padding: 8px; }
+main .m_filtrate dl .active { color: #26C9FF; background-color: #fff; }
+main .m_filtrate dl .active .iconfont { color: #f00; }
+main .m_filtrate .m_right { padding-top: 6px; }
+main .m_filtrate .m_right span { padding: 4px; color: #26C9FF; border: 1px solid #ccc; cursor: pointer; margin-right: 5px; background-color: #fff; display: inline-block; }
+main .m_filtrate .m_right span:hover { border: 1px solid #f00; background-color: #00f; color: #fff; }
+
+/*# sourceMappingURL=goodsList.css.map */

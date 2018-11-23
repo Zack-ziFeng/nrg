@@ -1,0 +1,33 @@
+header .h_left { height: 80px; margin-right: 20px; }
+header .h_left a { display: inline-block; padding-top: 10px; }
+header .h_left a img { display: block; }
+header .h_middle { padding: 8px 18px; background-color: #FEF2F2; border: 1px solid #FFB4A8; margin-top: 22px; }
+header .h_right { margin-top: 22px; }
+header .h_right a { display: inline-block; line-height: 30px; text-align: center; color: #fff; background-color: #2F97F0; padding: 0 20px; border-radius: 4px; }
+
+main { background-color: #FAFAFA; }
+main .center { background-color: #fff; border: 1px solid #CCCCCC; display: inline-block; padding: 20px; margin: 70px 0 55px 0; }
+
+footer .f_top { padding: 180px 0 26px 0; background: #F4F3F3 url("../img/f_top.png") center 35px no-repeat; }
+footer .f_top .f_left { margin-right: 50px; }
+footer .f_top .f_left img { display: block; }
+footer .f_top .f_left p { text-align: center; }
+footer .f_top .f_middle ul li { float: left; padding: 0 32px; border-right: 1px solid #EAEAEA; }
+footer .f_top .f_middle ul li dl dt { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+footer .f_top .f_middle ul li dl dd { padding-bottom: 20px; font-size: 16px; }
+footer .f_top .f_middle ul li dl dd a { color: #535353; }
+footer .f_top .f_middle ul li dl dd a:hover { text-decoration: underline; }
+footer .f_top .f_middle ul li dl dd button { padding: 10px 20px; background-color: #F4F3F3; border: 1px solid #535353; border-radius: 4px; outline: none; cursor: pointer; }
+footer .f_top .f_middle ul li:last-child { border-right: none; }
+footer .f_top .f_right { margin-right: 50px; }
+footer .f_top .f_right p { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+footer .f_top .f_right span { padding: 10px 20px 10px 0; font-size: 45px; }
+footer .f_top .f_right span:nth-child(2) { color: #5CC349; }
+footer .f_top .f_right span:last-child { color: #F5A71F; }
+footer .f_bottom { margin-top: 35px; }
+footer .f_bottom ul li { float: left; padding-right: 52px; font-size: 14px; }
+footer .f_bottom p { margin: 20px; text-align: center; }
+footer .f_bottom a { transition: color 0.4s linear; }
+footer .f_bottom a:hover { color: #f00; text-decoration: underline; }
+
+/*# sourceMappingURL=signUp.css.map */
