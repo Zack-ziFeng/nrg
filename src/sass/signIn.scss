@@ -98,7 +98,12 @@ main {
 				height: 58px;
 				background-color: #000;
 			}
-			p .fl {cursor: pointer;}
+			p .fl {
+				cursor: pointer;
+				input {
+					float: left;
+				}
+			}
 			p .m_warn {
 				padding-left: 5px;
 				color: #f00;
@@ -124,7 +129,6 @@ main {
 			}
 		}
 		.m_phone {
-			display: none;
 			padding: 0 40px;
 			background-color: #fff;
 			.phoneNumber span, .checkCode span, .phoneCheck span {

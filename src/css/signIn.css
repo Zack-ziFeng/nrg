@@ -19,11 +19,12 @@ main .m_content .m_code .username input { border-bottom: none; }
 main .m_content .m_code .checkCode input { padding: 20.5px 0; border: 1px solid #ccc; border-left: none; float: left; width: 140px; outline: none; }
 main .m_content .m_code .checkCode .check_code { float: left; width: 120px; height: 58px; background-color: #000; }
 main .m_content .m_code p .fl { cursor: pointer; }
+main .m_content .m_code p .fl input { float: left; }
 main .m_content .m_code p .m_warn { padding-left: 5px; color: #f00; display: none; cursor: default; }
 main .m_content .m_code button { margin-top: 14px; margin-bottom: 10px; cursor: pointer; outline: none; padding: 15px 160px; color: #fff; border: none; background-color: #2F97F0; border-radius: 4px; }
 main .m_content .m_code dl dt { margin-bottom: 8px; }
 main .m_content .m_code dl dd { float: left; font-size: 35px; margin-right: 18px; }
-main .m_content .m_phone { display: none; padding: 0 40px; background-color: #fff; }
+main .m_content .m_phone { padding: 0 40px; background-color: #fff; }
 main .m_content .m_phone .phoneNumber span, main .m_content .m_phone .checkCode span, main .m_content .m_phone .phoneCheck span { padding: 20px; border: 1px solid #ccc; border-right: none; float: left; }
 main .m_content .m_phone .phoneNumber input, main .m_content .m_phone .phoneCheck input { padding: 20.5px 0; border: 1px solid #ccc; border-left: none; float: left; width: 260px; outline: none; }
 main .m_content .m_phone .phoneNumber span { border-bottom: none; }
