@@ -6,7 +6,28 @@ header .h_right { margin-top: 22px; }
 header .h_right a { display: inline-block; line-height: 30px; text-align: center; color: #fff; background-color: #2F97F0; padding: 0 20px; border-radius: 4px; }
 
 main { background-color: #FAFAFA; }
-main .center { background-color: #fff; border: 1px solid #CCCCCC; display: inline-block; padding: 20px; margin: 70px 0 55px 0; }
+main .center { background-color: #fff; border: 1px solid #CCCCCC; padding: 20px; margin: 25px 0; position: relative; left: 50%; display: inline-block; transform: translateX(-50%); }
+main .center .m_left { border-right: 1px solid #E6E6E6; padding-right: 20px; }
+main .center .m_left h2 { text-align: center; font-size: 20px; padding: 16px 0; border-bottom: 3px solid #2F97F0; color: #2F97F0; position: relative; margin-bottom: 30px; font-weight: normal; }
+main .center .m_left h2:after { content: ""; border: 12px solid transparent; border-top-color: #2F97F0; position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); }
+main .center .m_left .content { padding: 0 100px; }
+main .center .m_left .content label { display: block; margin-bottom: 25px; overflow: hidden; }
+main .center .m_left .content label span { float: left; width: 100px; text-align: center; padding: 20px 0; border: 1px solid #ccc; border-right: none; }
+main .center .m_left .content label input { float: left; width: 260px; padding: 20.5px 0; border: 1px solid #ccc; border-left: none; outline: none; }
+main .center .m_left .content button { margin-top: 14px; margin-bottom: 10px; cursor: pointer; outline: none; padding: 15px 160px; color: #fff; border: none; background-color: #2F97F0; border-radius: 4px; }
+main .center .m_right { padding: 18px; }
+main .center .m_right h2 { padding: 20px 0; font-size: 16px; font-weight: normal; color: #000; }
+main .center .m_right .m_top .iconfont { margin-right: 8px; font-size: 40px; cursor: pointer; }
+main .center .m_right .m_top .qq { color: #3EB6E8; }
+main .center .m_right .m_top .wb { color: #F77767; }
+main .center .m_right .m_bottom ul li { margin-bottom: 20px; }
+main .center .m_right .m_bottom ul li span { font-size: 34px; margin-right: 8px; position: relative; top: 4px; }
+main .center .m_right .m_bottom ul li:nth-child(1) span { color: #3EB6E8; }
+main .center .m_right .m_bottom ul li:nth-child(2) span { color: #F77767; }
+main .center .m_right .m_bottom ul li:nth-child(3) span { color: #5AC303; }
+main .center .m_right .m_bottom ul li:nth-child(4) span { color: #C07830; }
+main .center .m_right .m_bottom ul li:nth-child(5) span { color: #FBAC05; }
+main .center .m_right .m_bottom ul li:nth-child(6) span { color: #C066BC; }
 
 footer .f_top { padding: 180px 0 26px 0; background: #F4F3F3 url("../img/f_top.png") center 35px no-repeat; }
 footer .f_top .f_left { margin-right: 50px; }

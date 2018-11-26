@@ -27,6 +27,395 @@ header {
 	}
 }
 
+nav {
+	padding: 14px 0;
+	ul {
+		display: inline-block;
+		transform: translateY(2px);
+		li {
+			float: left;
+			.arror {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+main {
+	.m_top {
+		.t_left {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-right: none;
+			.pic {
+				padding: 10px;
+				.bicPic {
+					display: block;
+					width: 320px;
+					height: 320px;
+					margin-bottom: 10px;
+				}
+				ul li {
+					float: left;
+					margin-right: 8px;
+					img {
+						width: 50px;
+						height: 50px;
+						border: 1px solid #fff;
+						display: block;
+						cursor: pointer;
+					}
+					.active {
+						border: 1px solid #2F97F0;
+					}
+				}
+			}
+			.btn {
+				span {
+					padding: 4px;
+					border: 1px solid #ccc;
+					border-radius: 2px;
+					display: block;
+					font-size: 12px;
+					margin-right: 8px;
+					cursor: pointer;
+					i {
+						font-style: normal;
+						padding: 0 2px;
+					}
+					label {cursor: pointer;}
+					&:last-child {
+						&:hover {
+							background-color: #ccc;
+							color: #fff;
+						}
+					}
+				}
+				.clearFix {
+					input {margin: 2px 2px 0 0;}
+				}
+
+			}
+		}
+		.t_middle {
+			border: 1px solid #ccc;
+			border-right: none;
+			h2 {
+				width: 580px;
+				font-size: 18px;
+				font-weight: bold;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				padding: 16px 20px;
+				color: #000;
+			}
+			.price {
+				background:transparent url('../img/goods/details_bg.png') left top no-repeat;
+				position: relative;
+				div {
+					margin-bottom: 24px;
+					position: relative;
+					&:first-child {
+						padding-top: 30px;
+					}
+					span {
+						display: inline-block;
+						width: 100px;
+						text-align: right;
+					}
+					#o_price {
+						font-weight: bold;
+						text-decoration: line-through;
+						color: #666666;
+					}
+					#n_price {
+						font-size: 25px;
+						top: -12px;
+						position: absolute;
+						font-weight: bolder;
+						 color: #CC0000;
+					}
+					ul {
+						display: inline-block;
+						li {
+							float: left;
+							position: relative;
+							top: 3px;
+							color: #EDA100;
+							cursor: pointer;
+						}
+					}
+					&:last-child {
+						position: absolute;
+						right: 35px;
+						top: 50%;
+						transform: translateY(-50%);
+						img {
+							width: 100px;
+							height: 100px;
+						}
+					}
+				}
+			}
+			.car_msg {
+				padding: 0 30px;
+				p {
+					padding: 10px 0;
+					a, i {
+						color: #D93600;
+						font-weight: bold;
+					}
+					a {
+						&:hover {text-decoration: underline;}
+					}
+				}
+				.place {
+					border-bottom: 1px dashed #ccc;
+					position: relative;
+					span {
+						padding: 8px 0;
+					}
+					.place_search {
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 3px;
+						padding: 4px;
+						cursor: pointer;
+						margin-right: 8px;
+					}
+					.place_list {
+						border: 2px solid #ccc;
+						position: absolute;
+						left: 55px;
+						top: 0;
+						border-radius: 5px;
+						display: none;
+						p {
+							background-color: #ccc;
+							padding: 0;
+							span {
+								display: inline-block;
+								padding: 4px;
+								background-color: #fff;
+								font-size: 12px;
+								color: #777;
+								font-weight: normal;
+							}
+						}
+						div {
+							padding: 10px;
+							background-color: #fff;
+							ul li {
+								float: left;
+								width: 80px;
+								margin-bottom: 12px;
+								span {
+									padding: 4px;
+									cursor: pointer;
+									transition: all 0.2s ease;
+									&:hover {
+										background-color: #FF875A;
+										color: #fff;
+									}
+								}
+							}
+						}
+					}
+				}
+				.goods_color, .goods_size {
+					margin: 14px 8px;
+					span {
+						float: left;
+						line-height: 26px;
+						margin-right: 5px;
+					}
+					ul {
+						float: left;
+						li {
+							float: left;
+							border: 2px solid #ccc;
+							margin-right: 5px;
+							line-height: 24px;
+							cursor: pointer;
+							img {
+								float: left;
+								width: 24px;
+								height: 24px;
+								display: inline-block;
+							}
+						}
+						.active {
+							border-color: #2F97F0;
+						}
+					}
+				}
+				.goods_size {
+					ul li {padding: 0 8px;}
+				}
+				.addCar_btn {
+					margin-bottom: 28px;
+					.input {
+						width: 70px;
+						float: left;
+						margin-right: 10px;
+						input {
+							float: left;
+							width: 40px;
+							height: 40px;
+							line-height: 40px;
+							border: 1px solid #ccc;
+							border-right: none;
+							text-align: center;
+							font-weight: bold;
+							font-size: 20px;
+						}
+						span {
+							float: left;
+							padding: 1.5px 2px;
+							border: 1px solid #ccc;
+							cursor: pointer;
+						}
+						#add {transform: rotate(180deg);}
+					}
+					#addCar, #now_buy {
+						float: left;
+						transform: translateY(-3px);
+						padding: 12px;
+						font-size: 18px;
+						color: #fff;
+						font-weight: bold;
+						background-color: #FF4400;
+						margin-right: 10px;
+						border: none;
+						border-radius: 5px;
+						outline: none;
+						cursor: pointer;
+						span {font-size: 18px;}
+					}
+					#now_buy {background-color: #BA7538;}
+				}
+			}
+		}
+		.t_right {
+			border: 1px solid #ccc;
+			width: 190px;
+			h3 {
+				padding-left: 10px;
+				line-height: 36px;
+				border-bottom: 1px solid #ccc;
+				background-color: #F5F5F5;
+			}
+			div {
+				padding: 10px;
+				p {
+					margin-bottom: 16px;
+					span {
+						font-size: 30px;
+						color: #CC0000;
+						font-weight: bolder;
+					}
+				}
+				h5 {
+					margin: 6px 0;
+					font-weight: bold;
+				}
+				ul li {
+					margin: 4px 8px;
+					span {
+						color: #CC0000;
+						font-weight: bold;
+					}
+				}
+				dl {
+					margin-top: 10px;
+					dt {
+						margin-bottom: 8px;
+						font-weight: bold;
+					}
+					dd {margin-bottom: 8px;}
+				}
+				img {
+					display: block;
+					width: 129px;
+				}
+			}
+		}
+	}
+	.m_middle {
+		.goods_msg_search {
+			margin: 20px 0;
+			ul {
+				border: 1px solid #ccc;
+				display: inline-block;
+				li {
+					float: left;
+					padding: 12px 34px;
+					border-left: 1px solid #ccc;
+					border-right: 1px solid #ccc;
+					font-size: 14px;
+					cursor: pointer;
+				}
+				.active {
+					border: 2px solid #fff;
+					border-top-color: #2F97F0;
+					padding: 10px 32px;
+				}
+			}
+		}
+		div {
+			margin-bottom: 14px;
+			h3 {
+				font-size: 16px;
+				padding: 8px;
+				border-bottom: 2px solid #2F97F0;
+			}
+		}
+	}
+	.m_bottom {
+		margin-bottom: 20px;
+		h2 {
+			font-size: 16px;
+			padding: 8px;
+			border-bottom: 2px solid #2F97F0;
+			margin-bottom: 8px;
+		}
+		ul {
+			li {
+				float: left;
+				border-right: 1px solid #ccc;
+				padding: 5px;
+				&:last-child {border-right: none;}
+				img {
+					width: 120px;
+					height: 120px;
+					display: block;
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		a, p {
+			display: block;
+			margin: 8px 0;
+			width: 228px;
+			text-align: center;
+		}
+		a {
+			transition: all 0.2s ease;
+			&:hover {
+				color: #2F97F0;
+				text-decoration: underline;
+			}
+		}
+		p {
+			font-weight: bold;
+			color: #CC0000;
+		}
+	}
+}
+
 footer {
 	.f_top {
 		padding: 180px 0 26px 0;

@@ -65,7 +65,7 @@ main {
 				}
 			}
 		}
-		.m_code {
+		.m_code, .m_phone {
 			padding: 0 40px;
 			background-color: #fff;
 			.username span, .password span, .checkCode span {
@@ -126,69 +126,10 @@ main {
 				float: left;
 				font-size: 35px;
 				margin-right: 18px;
-			}
-		}
-		.m_phone {
-			padding: 0 40px;
-			background-color: #fff;
-			.phoneNumber span, .checkCode span, .phoneCheck span {
-				padding: 20px;
-				border: 1px solid #ccc;
-				border-right: none;
-				float: left;
-			}
-			.phoneNumber input, .phoneCheck input {
-				padding: 20.5px 0;
-				border: 1px solid #ccc;
-				border-left: none;
-				float: left;
-				width: 260px;
-				outline: none;
-			}
-			.phoneNumber span {border-bottom: none;}
-			.phoneNumber input {border-bottom: none;}
-			.checkCode input {
-				padding: 20.5px 0;
-				border: 1px solid #ccc;
-				border-left: none;
-				float: left;
-				width: 140px;
-				outline: none;
-			}
-			.checkCode .check_code {
-				float: left;
-				width: 120px;
-				height: 58px;
-				background-color: #000;
-			}
-			p {
-				margin: 10px 0;
-				span {
-					display: inline-block;
-					background-color: #1FA67A;
-					padding: 2px;
-					color: #fff;
-					cursor: pointer;
-				}
-			}
-			button {
-				margin-top: 14px;
-				margin-bottom: 10px;
 				cursor: pointer;
-				outline: none;
-				padding: 15px 160px;
-				color: #fff;
-				border: none;
-				background-color: #2F97F0;
-				border-radius: 4px;
-			}
-			dl dt {margin-bottom: 8px;}
-			dl dd {
-				float: left;
-				font-size: 35px;
-				margin-right: 18px;
 			}
 		}
+		.m_phone {display: none;}
 	}
 }
 

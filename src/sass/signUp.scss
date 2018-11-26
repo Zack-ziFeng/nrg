@@ -33,9 +33,107 @@ main {
 	.center {
 		background-color: #fff;
 		border: 1px solid #CCCCCC;
-		display: inline-block;
 		padding: 20px;
-		margin: 70px 0 55px 0;
+		margin: 25px 0;
+		position: relative;
+		left: 50%;
+		display: inline-block;
+		transform: translateX(-50%);
+		.m_left {
+			border-right: 1px solid #E6E6E6;
+			padding-right: 20px;
+			h2 {
+				text-align: center;
+				font-size: 20px;
+				padding: 16px 0;
+				border-bottom: 3px solid #2F97F0;
+				color: #2F97F0;
+				position: relative;
+				margin-bottom: 30px;
+				font-weight: normal;
+				&:after {
+					content: "";
+    				border: 12px solid transparent;
+    				border-top-color: #2F97F0;
+    				position: absolute;
+    				bottom: -24px;
+    				left: 50%;
+    				transform: translateX(-50%);
+				}
+			}
+			.content {
+				padding: 0 100px;
+				label {
+					display: block;
+					margin-bottom: 25px;
+					overflow: hidden;
+					span {
+						float: left;
+						width: 100px;
+						text-align: center;
+						padding: 20px 0;
+						border: 1px solid #ccc;
+						border-right: none;
+					}
+					input {
+						float: left;
+						width: 260px;
+						padding: 20.5px 0;
+						border: 1px solid #ccc;
+						border-left: none;
+						outline: none;
+					}
+				}
+				button {
+					margin-top: 14px;
+    				margin-bottom: 10px;
+    				cursor: pointer;
+    				outline: none;
+    				padding: 15px 160px;
+    				color: #fff;
+    				border: none;
+    				background-color: #2F97F0;
+    				border-radius: 4px;
+				}
+			}
+		}
+		.m_right {
+			padding: 18px;
+			h2 {
+				padding: 20px 0;
+				font-size: 16px;
+				font-weight: normal;
+				color: #000;
+			}
+			.m_top {
+				.iconfont {
+					margin-right: 8px;
+					font-size: 40px;
+					cursor: pointer;
+				}
+				.qq {color: #3EB6E8;}
+				.wb {color: #F77767;}
+			}
+			.m_bottom {
+				ul {
+					li {
+						margin-bottom: 20px;
+						span {
+							font-size: 34px;
+							margin-right: 8px;
+							position: relative;
+							top: 4px;
+						}
+						&:nth-child(1) span {color: #3EB6E8;}
+						&:nth-child(2) span {color: #F77767;}
+						&:nth-child(3) span {color: #5AC303;}
+						&:nth-child(4) span {color: #C07830;}
+						&:nth-child(5) span {color: #FBAC05;}
+						&:nth-child(6) span {color: #C066BC;}
+					}
+				}
+			}
+		}
 	}
 }
 
