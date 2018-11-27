@@ -74,6 +74,7 @@ main {
 						padding: 20px 0;
 						border: 1px solid #ccc;
 						border-right: none;
+						cursor: pointer;
 					}
 					input {
 						float: left;
@@ -82,6 +83,24 @@ main {
 						border: 1px solid #ccc;
 						border-left: none;
 						outline: none;
+					}
+					.warn {
+						display: block;
+						color: transparent;
+						font-size: 16px;
+					}
+				}
+				.check_code {
+					input {width: 140px;}
+					div {
+						float: left;
+						width: 118px;
+						height: 56px;
+						line-height: 58px;
+						text-align: center;
+						cursor: pointer;
+						border: 1px solid #ccc;
+						font-size: 24px;
 					}
 				}
 				button {
