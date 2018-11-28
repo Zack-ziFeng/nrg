@@ -5,6 +5,8 @@
 	<title>详情页</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/details.css">
+	<script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/details.js"></script>
 </head>
 <body>
 	<header>
@@ -65,7 +67,7 @@
 							</ul>
 						</div>
 						<div class="clearFix fr">
-							<img src="../img/goods/details_QR.png">
+							<img src="../img/details_QR.png">
 							客户端扫购有惊喜
 						</div>
 					</div>
@@ -77,7 +79,7 @@
 							<div class="place_list">
 								<p><span class="iconfont">请选择&#xe6bb;</span></p>
 								<div>
-									<ul>
+									<ul class="clearFix">
 										<li><span>北京</span></li>
 										<li><span>天津</span></li>
 										<li><span>河北</span></li>
@@ -122,8 +124,10 @@
 							<span>颜色：</span>
 							<ul>
 								<li class="active">
-									<img src="../img/goods/1.jpg">
 									深灰色
+								</li>
+								<li>
+									红色
 								</li>
 							</ul>
 						</div>
@@ -137,7 +141,7 @@
 						</div>
 						<div class="addCar_btn clearFix">
 							<div class="input clearFix">
-								<input type="text" name="" value="1">
+								<input type="text" name="" value="1" id="num">
 								<span id="add" class="iconfont">&#xe6bb;</span><span id="sub" class="iconfont">&#xe6bb;</span>
 							</div>
 							<button id="addCar"><span class="iconfont">&#xe608;</span>添加购物车</button><button id="now_buy">立即购买</button>
@@ -161,7 +165,7 @@
 							<dd>电话：&nbsp;下载男士购app联系客服</dd>
 						</dl>
 						<h5>店铺二维码</h5>
-						<img src="../img/goods/shop_QR.png">
+						<img src="../img/shop_QR.png">
 					</div>
 				</div>
 			</div>

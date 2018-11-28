@@ -24,7 +24,7 @@ main .m_top .t_left .btn span:last-child:hover { background-color: #ccc; color: 
 main .m_top .t_left .btn .clearFix input { margin: 2px 2px 0 0; }
 main .m_top .t_middle { border: 1px solid #ccc; border-right: none; }
 main .m_top .t_middle h2 { width: 580px; font-size: 18px; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 16px 20px; color: #000; }
-main .m_top .t_middle .price { background: transparent url("../img/goods/details_bg.png") left top no-repeat; position: relative; }
+main .m_top .t_middle .price { background: transparent url("../img/details_bg.png") left top no-repeat; position: relative; }
 main .m_top .t_middle .price div { margin-bottom: 24px; position: relative; }
 main .m_top .t_middle .price div:first-child { padding-top: 30px; }
 main .m_top .t_middle .price div span { display: inline-block; width: 100px; text-align: right; }
@@ -41,7 +41,7 @@ main .m_top .t_middle .car_msg p a:hover { text-decoration: underline; }
 main .m_top .t_middle .car_msg .place { border-bottom: 1px dashed #ccc; position: relative; }
 main .m_top .t_middle .car_msg .place span { padding: 8px 0; }
 main .m_top .t_middle .car_msg .place .place_search { display: inline-block; border: 1px solid #ccc; border-radius: 3px; padding: 4px; cursor: pointer; margin-right: 8px; }
-main .m_top .t_middle .car_msg .place .place_list { border: 2px solid #ccc; position: absolute; left: 55px; top: 0; border-radius: 5px; display: none; }
+main .m_top .t_middle .car_msg .place .place_list { border: 2px solid #ccc; position: absolute; left: 55px; top: 0; border-radius: 5px; display: none; z-index: 999; background-color: #fff; }
 main .m_top .t_middle .car_msg .place .place_list p { background-color: #ccc; padding: 0; }
 main .m_top .t_middle .car_msg .place .place_list p span { display: inline-block; padding: 4px; background-color: #fff; font-size: 12px; color: #777; font-weight: normal; }
 main .m_top .t_middle .car_msg .place .place_list div { padding: 10px; background-color: #fff; }
@@ -51,8 +51,7 @@ main .m_top .t_middle .car_msg .place .place_list div ul li span:hover { backgro
 main .m_top .t_middle .car_msg .goods_color, main .m_top .t_middle .car_msg .goods_size { margin: 14px 8px; }
 main .m_top .t_middle .car_msg .goods_color span, main .m_top .t_middle .car_msg .goods_size span { float: left; line-height: 26px; margin-right: 5px; }
 main .m_top .t_middle .car_msg .goods_color ul, main .m_top .t_middle .car_msg .goods_size ul { float: left; }
-main .m_top .t_middle .car_msg .goods_color ul li, main .m_top .t_middle .car_msg .goods_size ul li { float: left; border: 2px solid #ccc; margin-right: 5px; line-height: 24px; cursor: pointer; }
-main .m_top .t_middle .car_msg .goods_color ul li img, main .m_top .t_middle .car_msg .goods_size ul li img { float: left; width: 24px; height: 24px; display: inline-block; }
+main .m_top .t_middle .car_msg .goods_color ul li, main .m_top .t_middle .car_msg .goods_size ul li { float: left; border: 2px solid #ccc; margin-right: 5px; line-height: 24px; cursor: pointer; padding: 0 8px; }
 main .m_top .t_middle .car_msg .goods_color ul .active, main .m_top .t_middle .car_msg .goods_size ul .active { border-color: #2F97F0; }
 main .m_top .t_middle .car_msg .goods_size ul li { padding: 0 8px; }
 main .m_top .t_middle .car_msg .addCar_btn { margin-bottom: 28px; }

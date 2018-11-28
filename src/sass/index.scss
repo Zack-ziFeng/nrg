@@ -1,44 +1,31 @@
 header {
-	border-bottom: 2px solid #F5F5F5;
+	background-color: #F9F9F9;
+	border-bottom: 1px solid #ccc;
 	.h_left {
-		float: left;
-		span {line-height: 60px;padding-right: 5px;}
+		padding: 12px 0;
+		color: #999A9C;
+	}
+	.h_right {
 		ul {
-			display: inline-block;
+			padding: 5px 0;
 			li {
 				float: left;
-				margin-right: 8px;
+				padding: 6px;
+				margin-right: 20px;
 				a {
-					line-height: 60px;
-					color: #777777;
-					&:hover {color: #f00;}
-				}
-				&:last-child {
-					span {
-						font-size: 20px;
-						cursor: pointer;
-						&:first-child {
-							&:hover {color: #2F97F0;}
-						}
-						&:last-child {
-							&:hover {color: #f00;}
-						}
+					&:hover {
+						text-decoration: underline;
 					}
+				}
+				&:first-child {
+					border: 1px solid #2F97F0;
+					border-radius: 4px;
+					a {color: #2F97F0;}
 				}
 			}
 		}
 	}
-	.h_right {
-		float: right;
-		ul li {
-			float: left;
-			margin-right: 16px;
-			line-height: 60px;
-			cursor: pointer;
-		}
-	}
 }
-
 nav {
 	.n_top {
 		.n_left {
@@ -127,13 +114,15 @@ nav {
 
 article {
 	margin-bottom: 30px;
+	background-color: #ccc;
 	ul li {
 		float: left;
-		a {
+		width: 100%;
+		img {
 			display: block;
-			height: 400px;
-			width: 1200px;
-			background:transparent url('../img/banner1.jpg') center top no-repeat;
+			cursor: pointer;
+			position: relative;
+			left: -300px;
 		}
 	}
 }

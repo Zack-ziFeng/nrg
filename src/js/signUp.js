@@ -1,42 +1,4 @@
 $(function(){
-	let Cookie = {
-		get:function(name){
-			var cookies = document.cookie;
-			var res = '';
-			cookies = cookies.split('; ');
-			for(var i=0;i<cookies.length;i++){
-				var arr = cookies[i].split('=');
-				if(arr[0] === name){
-					res = arr[1];
-				}
-			}
-			return res;
-		},
-		remove:function(name){
-			var now = new Date();
-			now.setDate(now.getDate()-1);
-			this.set(name,'x',{expires:now});
-		},
-		set:function(name,value,prop){
-			var str = name + '=' + value;
-			if(prop === undefined){
-				prop = {};
-			}
-			if(prop.expires){
-				str += ';expires=' + prop.expires.toUTCString();
-			}
-			if(prop.path){
-				str +=';path=' + prop.path
-			}
-			if(prop.domain){
-				str +=';domain=' + prop.domain
-			}
-			if(prop.secure){
-				str += ';secure';
-			}
-			document.cookie = str;
-		}
-	}
 
 	let check_username = false;
 	let check_phone_number = false;
@@ -52,7 +14,7 @@ $(function(){
 			str += arr[Math.floor(Math.random()*arr.length)];
 		}
 		$('#code').next().text(str);
-		code_val = str;
+		code_val = str.toLowerCase();
 	}
 
 	randomCode();
@@ -172,6 +134,40 @@ $(function(){
 	});
 
 	$('#code').blur(function() {
-		if ()
+		if ($(this).val().toLowerCase() === code_val) {
+			check_code = true;
+			$(this).next().next().css('color', 'transparent');
+		} else {
+			check_code = false;
+			$(this).next().next().text('验证码错误');
+			$(this).next().next().css('color', '#f00');
+		}
+	});
+
+	$('#sign_up').click(function() {
+		if (check_username && check_phone_number && check_password && check_password2 && check_code) {
+			$.ajax({
+				type: 'POST',
+				url: '../api/sign_up.php',
+				async: true,
+				data: {
+					'username': $('#username').val(),
+					'phone_number': $('#phone_number').val(),
+					'password': $('#psw1').val()
+				},
+				success: function(str) {
+					if (str === 'success') {
+						alert('注册成功');
+						location.href = '../html/signIn.html';
+					} else {
+						alert('注册失败');
+						$('input').val("");
+						$('.warn').css('color', 'transparent');
+					}
+				}
+			});
+		} else {
+			alert('输入的信息有错误');
+		}
 	});
 });

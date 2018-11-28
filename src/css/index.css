@@ -1,15 +1,10 @@
-header { border-bottom: 2px solid #F5F5F5; }
-header .h_left { float: left; }
-header .h_left span { line-height: 60px; padding-right: 5px; }
-header .h_left ul { display: inline-block; }
-header .h_left ul li { float: left; margin-right: 8px; }
-header .h_left ul li a { line-height: 60px; color: #777777; }
-header .h_left ul li a:hover { color: #f00; }
-header .h_left ul li:last-child span { font-size: 20px; cursor: pointer; }
-header .h_left ul li:last-child span:first-child:hover { color: #2F97F0; }
-header .h_left ul li:last-child span:last-child:hover { color: #f00; }
-header .h_right { float: right; }
-header .h_right ul li { float: left; margin-right: 16px; line-height: 60px; cursor: pointer; }
+header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
+header .h_left { padding: 12px 0; color: #999A9C; }
+header .h_right ul { padding: 5px 0; }
+header .h_right ul li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right ul li a:hover { text-decoration: underline; }
+header .h_right ul li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+header .h_right ul li:first-child a { color: #2F97F0; }
 
 nav .n_top .n_left { float: left; }
 nav .n_top .n_left #logo { display: inline-block; width: 225px; height: 100px; text-indent: -9999px; background: transparent url("../img/logo.png") left center no-repeat; margin-right: 170px; }
@@ -33,9 +28,9 @@ nav .n_bottom ul li:last-child:hover { text-decoration: underline; }
 nav .n_bottom ul li a { line-height: 36px; font-size: 16px; color: #fff; padding: 0 14px; }
 nav .n_bottom ul li a span { display: inline-block; font-size: 20px; line-height: 20px; transform: translate(-4px, 2px); }
 
-article { margin-bottom: 30px; }
-article ul li { float: left; }
-article ul li a { display: block; height: 400px; width: 1200px; background: transparent url("../img/banner1.jpg") center top no-repeat; }
+article { margin-bottom: 30px; background-color: #ccc; }
+article ul li { float: left; width: 100%; }
+article ul li img { display: block; cursor: pointer; position: relative; left: -300px; }
 
 main #goods1 h3, main #goods2 h3, main #goods3 h3, main #goods4 h3, main #goods5 h3, main #goods6 h3, main #goods7 h3, main #goods8 h3 { border-bottom: 3px solid #E6E6E6; }
 main #goods1 h3 span:first-child, main #goods2 h3 span:first-child, main #goods3 h3 span:first-child, main #goods4 h3 span:first-child, main #goods5 h3 span:first-child, main #goods6 h3 span:first-child, main #goods7 h3 span:first-child, main #goods8 h3 span:first-child { position: relative; bottom: 10px; font-size: 16px; color: #2FA0F4; padding: 10px 0; border-bottom: 3px solid #2FA0F4; }

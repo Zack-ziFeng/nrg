@@ -1,0 +1,12 @@
+<?php 
+	include "database.php";
+
+	$phone_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : null; 
+
+	$sql = "SELECT username FROM user WHERE phone_number='$phone_number'";
+
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$result->close();
+	echo json_encode($row['username'], JSON_UNESCAPED_UNICODE);
+ ?>
