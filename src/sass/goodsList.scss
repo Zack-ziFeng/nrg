@@ -110,11 +110,11 @@ main {
 		.goods {
 			border: 1px solid #ccc;
 			display: inline-block;
-			margin-bottom: 16px;
+			margin-bottom: 18px;
 			height: 370px;
 			overflow: hidden;
 			transition: all 0.2s ease;
-			margin-right: 4px;
+			margin-right: 8px;
 			background-color: #fff;
 			position: absolute;
 			&:hover {
@@ -203,8 +203,64 @@ main {
 				cursor: pointer;
 			}
 		}
+		.goods_page {
+			margin: 36px;
+			position: relative;
+			display: inline-block;
+			left: 50%;
+			transform: translateX(-50%);
+			#first, #last {
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				border: 1px solid #ccc;
+				margin: 0 15px;
+				float: left;
+				cursor: pointer;
+				&:hover {
+					border-color: #f00;
+					color: #2F97F0;
+				}
+			}
+			div {float: left;}
+			.prev, .next {
+				width: 50px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				border: 1px solid #ccc;
+				float: left;
+				cursor: pointer;
+				&:hover {
+					border-color: #f00;
+					color: #2F97F0;
+				}
+			}
+			#pages {
+				float: left;
+				li {
+					float: left;
+					width: 45px;
+					height: 45px;
+					line-height: 45px;
+					text-align: center;
+					font-size: 18px;
+					border: 1px solid #ccc;
+					cursor: pointer;
+					border-left: none;
+				}
+				.active {
+					background-color: #2F97F0;
+					color: #fff;
+				}
+				.hover {
+					border-color: #f00;
+					color: #2F97F0;
+				}
+			}
+		}
 	}
-	.m_page {}
 }
 
 footer {
