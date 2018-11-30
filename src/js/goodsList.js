@@ -38,35 +38,91 @@ $(function() {
 		}
 	}
 
-	$.ajax({
-		type: 'GET',
-		url: '../api/get_goods.php',
-		async: true,
-		data: {
-			'page': 1
-		},
-		success: function(str) {
-			let datas = JSON.parse(str).data;
-			let page = JSON.parse(str).length;
-			datas.forEach(function(item, idx) {
-				new CreateGoods(item, idx);
-			});
-		}
+	//登录
+	function checkSignIn() {
+      if (Cookie.get('username') !== '') {
+            $('.before').css('display', 'none');
+            $('.after').css('display', 'block');
+            $('.a_user').text(Cookie.get('username'));
+        } else {
+            $('.before').css('display', 'block');
+            $('.after').css('display', 'none');
+            $('.a_user').text('');
+        }  
+    }
+
+    checkSignIn();
+
+    $('.a_quit').click(function() {
+        document.cookie = "";
+        $('.before').css('display', 'block');
+        $('.after').css('display', 'none');
+        $('.a_user').text('');
+    });
+
+	function sort_goods(type, num) {
+		$.ajax({
+			type: 'GET',
+			url: '../api/get_goods.php',
+			async: true,
+			data: {
+				'page': num,
+				'type': type
+			},
+			success: function(str) {
+				let datas = JSON.parse(str).data;
+				let page = JSON.parse(str).length;
+				$('#last').click(function() {
+					sort_goods(type, page);
+				});
+				$('.goodsList').html("");
+				datas.forEach(function(item, idx, arr) {
+					new CreateGoods(item, idx, arr);
+				});
+			}
+		});
+	}
+
+	sort_goods('def', 1);
+
+	$('#def').click(function() {
+		$('#sort').find('dd').attr('class', '');
+		$(this).attr('class', 'active');
+		sort_goods('def', 1);
 	});
 
-	let CreateGoods = function(obj, idx) {
+	$('#num').click(function() {
+		$('#sort').find('dd').attr('class', '');
+		$(this).attr('class', 'active');
+		sort_goods('num', 1);
+	});
+
+	$('#hot').click(function() {
+		$('#sort').find('dd').attr('class', '');
+		$(this).attr('class', 'active');
+		sort_goods('hot', 1);
+	});
+
+	$('#price').click(function() {
+		$('#sort').find('dd').attr('class', '');
+		$(this).attr('class', 'active');
+		sort_goods('price', 1);
+	});
+
+	//商品
+	let CreateGoods = function(obj, idx, arr) {
 		this.loca = '.goodsList';
 		this.item = '.goods';
 		this.addCar = '.addCar';
 		this.star = '.star';
 		this.pic = '.picList';
-		this.init(obj, idx);
+		this.init(obj, idx, arr);
 	}
 
-	CreateGoods.prototype.init = function(obj, idx) {
+	CreateGoods.prototype.init = function(obj, idx, arr) {
 		this.goods = $(`<li class="goods" id=${obj.id}>
 						<div class="goods_top">
-							<a href="#"><img src="../img/good_list/${obj.img}"></a>
+							<a href="../html/details.html?idx=${obj.id}"><img src="../img/good_list/${obj.img}"></a>
 						</div>
 						<div class="goods_bottom">
 							<ul class="picList clearFix">
@@ -75,7 +131,7 @@ $(function() {
 								<li><img src="../img/good_list/${Math.floor(Math.random()*50 + 1) + '.jpg'}" alt=""></li>
 								<li><img src="../img/good_list/${Math.floor(Math.random()*50 + 1) + '.jpg'}" alt=""></li>
 							</ul>
-							<p><a href="#">${obj.name}</a></p>
+							<p><a href="../html/details.html?idx=${obj.id}">${obj.name}</a></p>
 							<div class="goodsMsg clearFix">
 								<strong>￥${obj.new_price}</strong>
 								<span>￥${obj.old_price}</span>
@@ -93,7 +149,7 @@ $(function() {
 					</li>`);
 		$(this.loca).append(this.goods);
 		$(this.loca).css({
-			'height': this.goods.outerHeight(true) * 9 + 'px'
+			'height': this.goods.outerHeight(true) * (arr.length/4) + 'px'
 		});
 
 		let num = obj.star*1;
@@ -122,15 +178,39 @@ $(function() {
 	CreateGoods.prototype.addCars = function() {
 		this.goods.find(this.addCar).click(()=>{
 			if (!Cookie.get('shopCar')) {
-				let arr = [this.goods.attr('id')];
-				let date = new Date();
-				Cookie.set('shopCar', JSON.stringify(arr));
+				let arr = [{
+					id: this.goods.attr('id'),
+					num: 1
+				}];
+				Cookie.set('shopCar', JSON.stringify(arr), {path: '/'});
 			} else {
 				let arr = JSON.parse(Cookie.get('shopCar'));
-				arr.push(this.goods.attr('id'));
-				Cookie.set('shopCar', JSON.stringify(arr));
+				let exist = true;
+				arr.forEach((item)=>{
+					if (item.id === this.goods.attr('id')) {
+						item.num = item.num*1 + 1;
+						Cookie.set('shopCar', JSON.stringify(arr), {path: '/'});
+						exist = false;
+					}
+				});
+				if (exist) {
+					let obj = {
+						id: this.goods.attr('id'),
+						num: 1
+					}
+					arr.push(obj);
+					Cookie.set('shopCar', JSON.stringify(arr), {path: '/'});
+				}
 			}
 		});
 	}
+
+
+	$('#first').click(function() {
+		let type = $('#sort').find('.active').attr('id');
+		sort_goods(type, 1);
+	});
+
+	
 
 });

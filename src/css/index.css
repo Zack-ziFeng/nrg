@@ -1,10 +1,15 @@
 header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
 header .h_left { padding: 12px 0; color: #999A9C; }
-header .h_right ul { padding: 5px 0; }
-header .h_right ul li { float: left; padding: 6px; margin-right: 20px; }
-header .h_right ul li a:hover { text-decoration: underline; }
-header .h_right ul li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
-header .h_right ul li:first-child a { color: #2F97F0; }
+header .h_right .before { padding: 5px 0; }
+header .h_right .before li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .before li a:hover { text-decoration: underline; }
+header .h_right .before li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+header .h_right .before li:first-child a { color: #2F97F0; }
+header .h_right .after { display: none; padding: 5px 0; }
+header .h_right .after li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .after li a:hover { text-decoration: underline; }
+header .h_right .after li:last-child { cursor: pointer; }
+header .h_right .after .a_user { font-weight: bold; color: red; }
 
 nav .n_top .n_left { float: left; }
 nav .n_top .n_left #logo { display: inline-block; width: 225px; height: 100px; text-indent: -9999px; background: transparent url("../img/logo.png") left center no-repeat; margin-right: 170px; }

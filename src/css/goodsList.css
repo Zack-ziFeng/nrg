@@ -1,10 +1,15 @@
 header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
 header .h_left { padding: 12px 0; color: #999A9C; }
-header .h_right ul { padding: 5px 0; }
-header .h_right ul li { float: left; padding: 6px; margin-right: 20px; }
-header .h_right ul li a:hover { text-decoration: underline; }
-header .h_right ul li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
-header .h_right ul li:first-child a { color: #2F97F0; }
+header .h_right .before { padding: 5px 0; }
+header .h_right .before li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .before li a:hover { text-decoration: underline; }
+header .h_right .before li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+header .h_right .before li:first-child a { color: #2F97F0; }
+header .h_right .after { display: none; padding: 5px 0; }
+header .h_right .after li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .after li a:hover { text-decoration: underline; }
+header .h_right .after li:last-child { cursor: pointer; }
+header .h_right .after .a_user { font-weight: bold; color: red; }
 
 main .m_nav { padding: 14px 0; }
 main .m_nav ul { display: inline-block; transform: translateY(2px); }
@@ -52,7 +57,9 @@ main .m_goods .goods_page div { float: left; }
 main .m_goods .goods_page .prev, main .m_goods .goods_page .next { width: 50px; height: 45px; line-height: 45px; text-align: center; border: 1px solid #ccc; float: left; cursor: pointer; }
 main .m_goods .goods_page .prev:hover, main .m_goods .goods_page .next:hover { border-color: #f00; color: #2F97F0; }
 main .m_goods .goods_page #pages { float: left; }
-main .m_goods .goods_page #pages li { float: left; width: 45px; height: 45px; line-height: 45px; text-align: center; font-size: 18px; border: 1px solid #ccc; cursor: pointer; border-left: none; }
+main .m_goods .goods_page #pages li { float: left; width: 45px; height: 45px; line-height: 45px; text-align: center; font-size: 18px; border: 1px solid #ccc; border-left: none; }
+main .m_goods .goods_page #pages li span { display: block; cursor: pointer; }
+main .m_goods .goods_page #pages .more { cursor: default; }
 main .m_goods .goods_page #pages .active { background-color: #2F97F0; color: #fff; }
 main .m_goods .goods_page #pages .hover { border-color: #f00; color: #2F97F0; }
 

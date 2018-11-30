@@ -13,11 +13,21 @@
 		<div class="container clearFix">
 			<div class="h_left fl">您好，欢迎来到潮男购物网站！</div>
 			<div class="h_right fr">
-				<ul>
-					<li><a href="signIn.html">请登录</a></li>
-					<li><a href="signUp.html">免费注册</a></li>
+				<ul class="before clearFix">
+					<li><a href="html/signIn.html">请登录</a></li>
+					<li><a href="html/signUp.html">免费注册</a></li>
 					<li><a href="#">用QQ账号登录</a></li>
 					<li><a href="#">用微博账号登录</a></li>
+				</ul>
+				<ul class="after clearFix">
+					<li>您好</li>
+					<li class="a_user"></li>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">待付款订单</a></li>
+					<li><a href="#">待确认收货</a></li>
+					<li><a href="#">待评价交易</a></li>
+					<li><a href="#">我的收藏</a></li>
+					<li class="a_quit">[退出]</li>
 				</ul>
 			</div>
 		</div>
@@ -34,17 +44,17 @@
 			</div>
 			<div class="m_filtrate clearFix">
 				<div class="m_left clearFix fl">
-					<dl class="clearFix fl">
+					<dl class="clearFix fl" id="sort">
 						<dt>排序方式：</dt>
-						<dd id="default" class="active">默认</dd>
-						<dd id="sales">销量<span class="iconfont">&#xe7f1;</span></dd>
-						<dd id="popularity">人气<span class="iconfont">&#xe7f1;</span></dd>
+						<dd id="def" class="active">默认</dd>
+						<dd id="num">销量<span class="iconfont">&#xe7f1;</span></dd>
+						<dd id="hot">人气<span class="iconfont">&#xe7f1;</span></dd>
 						<dd id="price">价格<span class="iconfont">&#xe7f1;</span></dd>
 						<dd><input type="text">-<input type="text"><button>确定</button></dd>
 					</dl>
 				</div>
 				<div class="m_right fr">
-					<span>上一页</span><span>下一页</span>
+					<span class="prev">上一页</span><span class="next">下一页</span>
 				</div>
 			</div>
 			<div class="m_goods">
@@ -54,12 +64,12 @@
 					<div class="clearFix">
 						<span class="prev">上一页</span>
 						<ul id="pages" class="clearFix">
-							<li class="active">1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
+							<li class="active"><span>1</span></li>
+							<li><span>2</span></li>
+							<li><span>3</span></li>
+							<li><span>4</span></li>
+							<li><span>5</span></li>
+							<li class="more">...</li>
 						</ul>
 						<span class="next">下一页</span>
 					</div>

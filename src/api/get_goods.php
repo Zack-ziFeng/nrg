@@ -11,14 +11,19 @@
 			$sql = "SELECT * FROM goods";
 			break;
 		case 'num':
-
+			$sql = "SELECT * FROM goods ORDER BY num DESC";
 			break;
+		case 'hot':
+			$sql = "SELECT * FROM goods ORDER BY hot DESC";
+		break;
+		case 'price':
+			$sql = "SELECT * FROM goods ORDER BY new_price DESC";
+		break;
 		default:
-			# code...
+			$sql = "SELECT * FROM goods";
 			break;
 	}
 
-	$sql = "SELECT * FROM goods";
 	$result = $conn->query($sql);
 	$row = $result->fetch_all(MYSQLI_ASSOC);
 	$result->close();

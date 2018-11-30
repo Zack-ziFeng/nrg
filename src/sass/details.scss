@@ -6,7 +6,7 @@ header {
 		color: #999A9C;
 	}
 	.h_right {
-		ul {
+		.before {
 			padding: 5px 0;
 			li {
 				float: left;
@@ -22,6 +22,25 @@ header {
 					border-radius: 4px;
 					a {color: #2F97F0;}
 				}
+			}
+		}
+		.after {
+			display: none;
+			padding: 5px 0;
+			li {
+				float: left;
+				padding: 6px;
+				margin-right: 20px;
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				&:last-child {cursor: pointer;}
+			}
+			.a_user {
+				font-weight: bold;
+				color: red;
 			}
 		}
 	}
@@ -47,26 +66,58 @@ main {
 			padding: 10px;
 			border: 1px solid #ccc;
 			border-right: none;
-			.pic {
-				padding: 10px;
-				.bicPic {
-					display: block;
-					width: 320px;
-					height: 320px;
-					margin-bottom: 10px;
-				}
-				ul li {
-					float: left;
-					margin-right: 8px;
+			.pic_box {
+				position: relative;
+				.pic {
+					position: relative;
 					img {
-						width: 50px;
-						height: 50px;
-						border: 1px solid #fff;
 						display: block;
-						cursor: pointer;
+						width: 320px;
+						height: 320px;
 					}
-					.active {
-						border: 1px solid #2F97F0;
+					.lens {
+						position: absolute;
+						left: 0;
+						top: 0;
+						background-color: rgba(0, 0, 0, 0.4);
+						width: 200px;
+						height: 200px;
+						display: none;
+						cursor: move;
+					}
+				}
+				.bigPic {
+					position: absolute;
+					width: 400px;
+					height: 400px;
+					z-index: 9999;
+					left: 330px;
+					top: 0;
+					overflow: hidden;
+					img {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 640px;
+						height: 640px;
+					}
+				}
+				.picList {
+					ul {
+						margin: 14px 0;
+						li {
+							float: left;
+							width: 50px;
+							height: 50px;
+							border: 2px solid #fff;
+							cursor: pointer;
+							img {
+								width: 50px;
+								height: 50px;
+								display: block;
+							}
+						}
+						.active {border-color: #008BE4;}
 					}
 				}
 			}
@@ -142,7 +193,7 @@ main {
 							float: left;
 							position: relative;
 							top: 3px;
-							color: #EDA100;
+							color: #ccc;
 							cursor: pointer;
 						}
 					}

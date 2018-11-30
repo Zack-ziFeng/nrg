@@ -13,11 +13,21 @@
 		<div class="container clearFix">
 			<div class="h_left fl">您好，欢迎来到潮男购物网站！</div>
 			<div class="h_right fr">
-				<ul>
-					<li><a href="signIn.html">请登录</a></li>
-					<li><a href="signUp.html">免费注册</a></li>
+				<ul class="before clearFix">
+					<li><a href="html/signIn.html">请登录</a></li>
+					<li><a href="html/signUp.html">免费注册</a></li>
 					<li><a href="#">用QQ账号登录</a></li>
 					<li><a href="#">用微博账号登录</a></li>
+				</ul>
+				<ul class="after clearFix">
+					<li>您好</li>
+					<li class="a_user"></li>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">待付款订单</a></li>
+					<li><a href="#">待确认收货</a></li>
+					<li><a href="#">待评价交易</a></li>
+					<li><a href="#">我的收藏</a></li>
+					<li class="a_quit">[退出]</li>
 				</ul>
 			</div>
 		</div>
@@ -28,7 +38,7 @@
 			<span class="iconfont">&#xe62b;</span>
 			<ul>
 				<li><a href="../index.html">首页</a><span class="iconfont arror">&#xe61b;</span></li>
-				<li>秋冬款日系圆领套头毛衣男韩版修身型针织衫青年潮流长袖拼色线衣 黑色 M</li>
+				<li class="goods_name"></li>
 			</ul>
 		</div>
 	</nav>
@@ -37,13 +47,20 @@
 		<div class="container">
 			<div class="m_top clearFix">
 				<div class="t_left fl">
-					<div class="pic">
-						<img src="../img/goods/1.jpg" alt="" class="bicPic">
-						<ul class="clearFix">
-							<li><img src="../img/goods/1.jpg" alt="" class="active"></li>
-							<li><img src="../img/goods/2.jpg" alt=""></li>
-						</ul>
+					
+					<div class="pic_box">
+						<div class="pic">
+							<img src="" alt="">
+							<span class="lens"></span>
+						</div>
+						<div class="bigPic">
+							<img src="">
+						</div>
+						<div class="picList">
+							<ul class="clearFix"></ul>
+						</div>
 					</div>
+
 					<div class="btn clearFix">
 						<span class="fl">分享(<i>0</i>)</span>
 						<span class="fl">收藏(<i>0</i>)</span>
@@ -52,13 +69,13 @@
 					</div>
 				</div>
 				<div class="t_middle fl">
-					<h2 title="秋冬款日系圆领套头毛衣男韩版修身型针织衫青年潮流长袖拼色线衣 黑色 M">秋冬款日系圆领套头毛衣男韩版修身型针织衫青年潮流长袖拼色线衣 黑色 M</h2>
+					<h2 class="goods_name" title=""></h2>
 					<div class="price clearFix">
-						<div><span>市&nbsp;场&nbsp;价：</span><i id="o_price">￥198.00</i></div>
-						<div><span>商&nbsp;城&nbsp;价：</span><i id="n_price">￥98.00</i></div>
+						<div><span>市&nbsp;场&nbsp;价：</span><i id="o_price"></i></div>
+						<div><span>商&nbsp;城&nbsp;价：</span><i id="n_price"></i></div>
 						<div>
 							<span>商品评分：</span>
-							<ul class="clearFix">
+							<ul class="clearFix" id="star">
 								<li class="iconfont">&#xe6b9;</li>
 								<li class="iconfont">&#xe6b9;</li>
 								<li class="iconfont">&#xe6b9;</li>
@@ -123,20 +140,13 @@
 						<div class="goods_color clearFix">
 							<span>颜色：</span>
 							<ul>
-								<li class="active">
-									深灰色
-								</li>
-								<li>
-									红色
-								</li>
+								
 							</ul>
 						</div>
 						<div class="goods_size clearFix">
 							<span>尺码：</span>
 							<ul>
-								<li class="active">M</li>
-								<li>L</li>
-								<li>XL</li>
+								
 							</ul>
 						</div>
 						<div class="addCar_btn clearFix">

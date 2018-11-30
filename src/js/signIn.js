@@ -48,7 +48,7 @@ $(function() {
 		code_val = str.toLowerCase();
 	}
 
-	function sign_in(url, data, str) {
+	function sign_in(url, data, string) {
 		if (check_code) {
 			$.ajax({
 				type: 'POST',
@@ -57,9 +57,11 @@ $(function() {
 				data: data,
 				success: function(str) {
 					if (str === 'yes') {
+						Cookie.set('username', data.username || data.phone_number, {path: '/'});
 						location.href = '../xxxx.html';
 					} else {
-						alert(str);
+						randomCode();
+						alert(string);
 						$('input').val('');
 					}
 				}

@@ -1,10 +1,15 @@
 header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
 header .h_left { padding: 12px 0; color: #999A9C; }
-header .h_right ul { padding: 5px 0; }
-header .h_right ul li { float: left; padding: 6px; margin-right: 20px; }
-header .h_right ul li a:hover { text-decoration: underline; }
-header .h_right ul li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
-header .h_right ul li:first-child a { color: #2F97F0; }
+header .h_right .before { padding: 5px 0; }
+header .h_right .before li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .before li a:hover { text-decoration: underline; }
+header .h_right .before li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+header .h_right .before li:first-child a { color: #2F97F0; }
+header .h_right .after { display: none; padding: 5px 0; }
+header .h_right .after li { float: left; padding: 6px; margin-right: 20px; }
+header .h_right .after li a:hover { text-decoration: underline; }
+header .h_right .after li:last-child { cursor: pointer; }
+header .h_right .after .a_user { font-weight: bold; color: red; }
 
 nav { padding: 14px 0; }
 nav ul { display: inline-block; transform: translateY(2px); }
@@ -12,11 +17,16 @@ nav ul li { float: left; }
 nav ul li .arror { font-size: 12px; }
 
 main .m_top .t_left { padding: 10px; border: 1px solid #ccc; border-right: none; }
-main .m_top .t_left .pic { padding: 10px; }
-main .m_top .t_left .pic .bicPic { display: block; width: 320px; height: 320px; margin-bottom: 10px; }
-main .m_top .t_left .pic ul li { float: left; margin-right: 8px; }
-main .m_top .t_left .pic ul li img { width: 50px; height: 50px; border: 1px solid #fff; display: block; cursor: pointer; }
-main .m_top .t_left .pic ul li .active { border: 1px solid #2F97F0; }
+main .m_top .t_left .pic_box { position: relative; }
+main .m_top .t_left .pic_box .pic { position: relative; }
+main .m_top .t_left .pic_box .pic img { display: block; width: 320px; height: 320px; }
+main .m_top .t_left .pic_box .pic .lens { position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.4); width: 200px; height: 200px; display: none; cursor: move; }
+main .m_top .t_left .pic_box .bigPic { position: absolute; width: 400px; height: 400px; z-index: 9999; left: 330px; top: 0; overflow: hidden; }
+main .m_top .t_left .pic_box .bigPic img { position: absolute; left: 0; top: 0; width: 640px; height: 640px; }
+main .m_top .t_left .pic_box .picList ul { margin: 14px 0; }
+main .m_top .t_left .pic_box .picList ul li { float: left; width: 50px; height: 50px; border: 2px solid #fff; cursor: pointer; }
+main .m_top .t_left .pic_box .picList ul li img { width: 50px; height: 50px; display: block; }
+main .m_top .t_left .pic_box .picList ul .active { border-color: #008BE4; }
 main .m_top .t_left .btn span { padding: 4px; border: 1px solid #ccc; border-radius: 2px; display: block; font-size: 12px; margin-right: 8px; cursor: pointer; }
 main .m_top .t_left .btn span i { font-style: normal; padding: 0 2px; }
 main .m_top .t_left .btn span label { cursor: pointer; }
@@ -31,7 +41,7 @@ main .m_top .t_middle .price div span { display: inline-block; width: 100px; tex
 main .m_top .t_middle .price div #o_price { font-weight: bold; text-decoration: line-through; color: #666666; }
 main .m_top .t_middle .price div #n_price { font-size: 25px; top: -12px; position: absolute; font-weight: bolder; color: #CC0000; }
 main .m_top .t_middle .price div ul { display: inline-block; }
-main .m_top .t_middle .price div ul li { float: left; position: relative; top: 3px; color: #EDA100; cursor: pointer; }
+main .m_top .t_middle .price div ul li { float: left; position: relative; top: 3px; color: #ccc; cursor: pointer; }
 main .m_top .t_middle .price div:last-child { position: absolute; right: 35px; top: 50%; transform: translateY(-50%); }
 main .m_top .t_middle .price div:last-child img { width: 100px; height: 100px; }
 main .m_top .t_middle .car_msg { padding: 0 30px; }
