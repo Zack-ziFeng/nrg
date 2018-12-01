@@ -21,7 +21,7 @@ main .m_top .t_left .pic_box { position: relative; }
 main .m_top .t_left .pic_box .pic { position: relative; }
 main .m_top .t_left .pic_box .pic img { display: block; width: 320px; height: 320px; }
 main .m_top .t_left .pic_box .pic .lens { position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.4); width: 200px; height: 200px; display: none; cursor: move; }
-main .m_top .t_left .pic_box .bigPic { position: absolute; width: 400px; height: 400px; z-index: 9999; left: 330px; top: 0; overflow: hidden; }
+main .m_top .t_left .pic_box .bigPic { display: none; position: absolute; width: 400px; height: 400px; z-index: 9999; left: 330px; top: 0; overflow: hidden; }
 main .m_top .t_left .pic_box .bigPic img { position: absolute; left: 0; top: 0; width: 640px; height: 640px; }
 main .m_top .t_left .pic_box .picList ul { margin: 14px 0; }
 main .m_top .t_left .pic_box .picList ul li { float: left; width: 50px; height: 50px; border: 2px solid #fff; cursor: pointer; }

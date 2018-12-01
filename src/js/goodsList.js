@@ -1,42 +1,42 @@
 $(function() {
 	let Cookie = {
-		get:function(name){
-			var cookies = document.cookie;
-			var res = '';
-			cookies = cookies.split('; ');
-			for(var i=0;i<cookies.length;i++){
-				var arr = cookies[i].split('=');
-				if(arr[0] === name){
-					res = arr[1];
-				}
-			}
-			return res;
-		},
-		remove:function(name){
-			var now = new Date();
-			now.setDate(now.getDate()-1);
-			this.set(name,'x',{expires:now});
-		},
-		set:function(name,value,prop){
-			var str = name + '=' + value;
-			if(prop === undefined){
-				prop = {};
-			}
-			if(prop.expires){
-				str += ';expires=' + prop.expires.getTime();
-			}
-			if(prop.path){
-				str +=';path=' + prop.path
-			}
-			if(prop.domain){
-				str +=';domain=' + prop.domain
-			}
-			if(prop.secure){
-				str += ';secure';
-			}
-			document.cookie = str;
-		}
-	}
+        get:function(name){
+            var cookies = document.cookie;
+            var res = '';
+            cookies = cookies.split('; ');
+            for(var i=0;i<cookies.length;i++){
+                var arr = cookies[i].split('=');
+                if(arr[0] === name){
+                    res = arr[1];
+                }
+            }
+            return res;
+        },
+        remove:function(name){
+            var now = new Date();
+            now.setDate(now.getDate()-1);
+            this.set(name,'',{expires:now, path: '/'});
+        },
+        set:function(name,value,prop){
+            var str = name + '=' + value;
+            if(prop === undefined){
+                prop = {};
+            }
+            if(prop.expires){
+                str += ';expires=' + prop.expires.getTime();
+            }
+            if(prop.path){
+                str +=';path=' + prop.path
+            }
+            if(prop.domain){
+                str +=';domain=' + prop.domain
+            }
+            if(prop.secure){
+                str += ';secure';
+            }
+            document.cookie = str;
+        }
+    }
 
 	//登录
 	function checkSignIn() {
@@ -54,7 +54,7 @@ $(function() {
     checkSignIn();
 
     $('.a_quit').click(function() {
-        document.cookie = "";
+        Cookie.remove('username');
         $('.before').css('display', 'block');
         $('.after').css('display', 'none');
         $('.a_user').text('');

@@ -17,7 +17,7 @@ $(function() {
         remove:function(name){
             var now = new Date();
             now.setDate(now.getDate()-1);
-            this.set(name,'',{expires:now});
+            this.set(name,'',{expires:now, path: '/'});
         },
         set:function(name,value,prop){
             var str = name + '=' + value;
@@ -55,7 +55,7 @@ $(function() {
     checkSignIn();
 
     $('.a_quit').click(function() {
-        document.cookie = "";
+        Cookie.remove('username');
         $('.before').css('display', 'block');
         $('.after').css('display', 'none');
         $('.a_user').text('');
@@ -223,7 +223,7 @@ $(function() {
 			let arr = JSON.parse(Cookie.get('shopCar'));
 			let exist = true;
 			arr.forEach((item)=>{
-				if (item.id === this.goods.attr('id')) {
+				if (item.id === idx) {
 					item.num = item.num*1 + number;
 					Cookie.set('shopCar', JSON.stringify(arr), {path: '/'});
 					exist = false;
@@ -243,7 +243,7 @@ $(function() {
 	//立即购买
 	$('#now_buy').click(()=>{
 		let idx = location.search.slice(1).split('=')[1];
-		let number = $('.input').find('input').val();
+		let number = $('.input').find('input').val()*1;
 		if (!Cookie.get('shopCar')) {
 			let arr = [{
 				id: idx,
@@ -255,7 +255,7 @@ $(function() {
 			let arr = JSON.parse(Cookie.get('shopCar'));
 			let exist = true;
 			arr.forEach((item)=>{
-				if (item.id === this.goods.attr('id')) {
+				if (item.id === idx) {
 					item.num = item.num*1 + number;
 					Cookie.set('shopCar', JSON.stringify(arr), {path: '/'});
 					location.href = "../html/shopCar.html";

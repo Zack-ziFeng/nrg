@@ -26,7 +26,7 @@ $(function() {
         remove:function(name){
             var now = new Date();
             now.setDate(now.getDate()-1);
-            this.set(name,'',{expires:now});
+            this.set(name,'',{expires:now, path: '/'});
         },
         set:function(name,value,prop){
             var str = name + '=' + value;
@@ -64,7 +64,7 @@ $(function() {
     checkSignIn();
 
     $('.a_quit').click(function() {
-        document.cookie = "";
+        Cookie.remove('username');
         $('.before').css('display', 'block');
         $('.after').css('display', 'none');
         $('.a_user').text('');
