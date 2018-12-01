@@ -69,4 +69,9 @@ $(function() {
         $('.after').css('display', 'none');
         $('.a_user').text('');
     });
+
+    let IndexItem = function(obj) {
+        this.loca = '.m_goods';
+        this.init(obj);
+    }
 });
