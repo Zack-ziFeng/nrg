@@ -47,7 +47,7 @@ $(function() {
             }
             document.cookie = str;
         }
-    }
+ - 1    }
 
     function checkSignIn() {
       if (Cookie.get('username') !== '') {
@@ -70,8 +70,63 @@ $(function() {
         $('.a_user').text('');
     });
 
-    let IndexItem = function(obj) {
+    let goodsArr = [];
+    for (let i=0; i<8; i++) {
+        goodsArr.push(Math.floor(Math.random()*500 + 1))
+    }
+
+    $.ajax({
+        type: 'GET',
+        url: 'api/shopCar.php',
+        async: true,
+        data: {
+            'idxArr': JSON.stringify(goodsArr)
+        },
+        success: function(str) {
+            console.log(JSON.parse(str))
+            let item = JSON.parse(str);
+            new IndexItem(item);
+        }
+    });
+
+    let IndexItem = function(arr) {
         this.loca = '.m_goods';
-        this.init(obj);
+        this.init(arr);
+    }
+
+    IndexItem.prototype.init = function(arr) {
+        for (let i=1; i<=8; i++) {
+            $item = $(`
+                <li>
+                    <a href="html/details.html?id=${arr[i - 1].id}">
+                        <div class="m_img"><img src="img/good_list/${arr[i - 1].img}"><span>今日</span></div>
+                        <p><a href="html/details.html?id=${arr[i - 1].id}">${arr[i - 1].name}</a></p>
+                        <span class="m_price">￥&nbsp;<strong>${arr[i - 1].new_price}</strong></span><button>去下单</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/details.html?id=${arr[i - 1].id}">
+                        <div class="m_img"><img src="img/good_list/${arr[i - 1].img}"><span>今日</span></div>
+                        <p><a href="html/details.html?id=${arr[i - 1].id}">${arr[i - 1].name}</a></p>
+                        <span class="m_price">￥&nbsp;<strong>${arr[i - 1].new_price}</strong></span><button>去下单</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/details.html?id=${arr[i - 1].id}">
+                        <div class="m_img"><img src="img/good_list/${arr[i - 1].img}"><span>今日</span></div>
+                        <p><a href="html/details.html?id=${arr[i - 1].id}">${arr[i - 1].name}</a></p>
+                        <span class="m_price">￥&nbsp;<strong>${arr[i - 1].new_price}</strong></span><button>去下单</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/details.html?id=${arr[i - 1].id}">
+                        <div class="m_img"><img src="img/good_list/${arr[i - 1].img}"><span>今日</span></div>
+                        <p><a href="html/details.html?id=${arr[i - 1].id}">${arr[i - 1].name}</a></p>
+                        <span class="m_price">￥&nbsp;<strong>${arr[i - 1].new_price}</strong></span><button>去下单</button>
+                    </a>
+                </li>
+            `);
+            $(`#goods${i} ` + this.loca).append($item);
+        }
     }
 });
