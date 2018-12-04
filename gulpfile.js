@@ -1,6 +1,7 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
-let uglify = require('gulp-uglify');
+var babel = require("gulp-babel");    // 用于ES6转化ES5
+var uglify = require('gulp-uglify'); // 用于压缩 JS
 
 gulp.task('compileSass', function(){
 	gulp.src(['./src/sass/*.scss'])
@@ -19,8 +20,14 @@ var opt = {
   preserveComments: 'all' //保留所有注释
 }
 
+gulp.task("toes5", function () {
+  return gulp.src("./src/js/*.js")// ES6 源码存放的路径
+    .pipe(babel()) 
+    .pipe(gulp.dest("./src/js/js_es5/")); //转换成 ES5 存放的路径
+});
+
 gulp.task('jsmin', function () {
-  gulp.src(['./src/js/*.js', '!src/js/**/{test1,test2}.js'])
+  gulp.src(['./src/js/js_es5/*.js', '!src/js/**/{test1,test2}.js'])
     .pipe(uglify(opt))
-    .pipe(gulp.dest('./src/js2/'));
+    .pipe(gulp.dest('./src/js/js_min/'));
 });
