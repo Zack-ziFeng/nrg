@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "doc"
@@ -20,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/Zack-ziFeng/nrg/issues"
   },
-  "homepage": "https://github.com/Zack-ziFeng/nrg#readme"
+  "homepage": "https://github.com/Zack-ziFeng/nrg#readme",
+  "description": ""
 }

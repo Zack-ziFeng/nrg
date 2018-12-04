@@ -1,125 +1,281 @@
 header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
+
 header .h_left { padding: 12px 0; color: #999A9C; }
+
 header .h_right .before { padding: 5px 0; }
+
 header .h_right .before li { float: left; padding: 6px; margin-right: 20px; }
+
 header .h_right .before li a:hover { text-decoration: underline; }
+
 header .h_right .before li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+
 header .h_right .before li:first-child a { color: #2F97F0; }
+
 header .h_right .after { display: none; padding: 5px 0; }
+
 header .h_right .after li { float: left; padding: 6px; margin-right: 20px; }
+
 header .h_right .after li a:hover { text-decoration: underline; }
+
 header .h_right .after li:last-child { cursor: pointer; }
+
 header .h_right .after .a_user { font-weight: bold; color: red; }
 
+#nav .n_top .n_left { float: left; }
+
+#nav .n_top .n_left #logo { display: inline-block; width: 225px; height: 100px; text-indent: -9999px; background: transparent url("../img/logo.png") left center no-repeat; margin-right: 170px; }
+
+#nav .n_top .n_middle { margin-top: 30px; }
+
+#nav .n_top .n_middle #n_search { border-radius: 20px; border: 2px solid #2F97F0; padding: 2px; margin-bottom: 2px; }
+
+#nav .n_top .n_middle #n_search input { width: 300px; border: none; line-height: 28px; border-radius: 15px; padding-left: 20px; outline: none; }
+
+#nav .n_top .n_middle #n_search button { border: none; color: #fff; background-color: #2F97F0; line-height: 28px; padding: 0 20px; border-radius: 15px; outline: none; cursor: pointer; }
+
+#nav .n_top .n_middle #n_hot span { float: left; }
+
+#nav .n_top .n_middle #n_hot ul li { float: left; margin-right: 5px; }
+
+#nav .n_top .n_middle #n_hot ul li a { color: #555; }
+
+#nav .n_top .n_middle #n_hot ul li a:hover { color: #f00; }
+
+#nav .n_top .n_right { float: right; }
+
+#nav .n_top .n_right div { display: inline-block; margin-right: 8px; margin-top: 30px; }
+
+#nav .n_top .n_right div a { display: inline-block; padding: 10px; line-height: 20px; background-color: #FAFAFA; color: #777; }
+
+#nav .n_bottom { background-color: #2F97F0; }
+
+#nav .n_bottom ul li { float: left; }
+
+#nav .n_bottom ul li:first-child { background-color: #1280DD; }
+
+#nav .n_bottom ul li:hover { background-color: #1280DD; }
+
+#nav .n_bottom ul li:last-child { float: right; }
+
+#nav .n_bottom ul li:last-child:hover { text-decoration: underline; }
+
+#nav .n_bottom ul li a { line-height: 36px; font-size: 16px; color: #fff; padding: 0 14px; }
+
+#nav .n_bottom ul li a span { display: inline-block; font-size: 20px; line-height: 20px; transform: translate(-4px, 2px); }
+
 nav { padding: 14px 0; }
+
 nav ul { display: inline-block; transform: translateY(2px); }
+
 nav ul li { float: left; }
+
 nav ul li .arror { font-size: 12px; }
 
 main .m_top .t_left { padding: 10px; border: 1px solid #ccc; border-right: none; }
+
 main .m_top .t_left .pic_box { position: relative; }
+
 main .m_top .t_left .pic_box .pic { position: relative; }
+
 main .m_top .t_left .pic_box .pic img { display: block; width: 320px; height: 320px; }
+
 main .m_top .t_left .pic_box .pic .lens { position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.4); width: 200px; height: 200px; display: none; cursor: move; }
+
 main .m_top .t_left .pic_box .bigPic { display: none; position: absolute; width: 400px; height: 400px; z-index: 9999; left: 330px; top: 0; overflow: hidden; }
+
 main .m_top .t_left .pic_box .bigPic img { position: absolute; left: 0; top: 0; width: 640px; height: 640px; }
+
 main .m_top .t_left .pic_box .picList ul { margin: 14px 0; }
+
 main .m_top .t_left .pic_box .picList ul li { float: left; width: 50px; height: 50px; border: 2px solid #fff; cursor: pointer; }
+
 main .m_top .t_left .pic_box .picList ul li img { width: 50px; height: 50px; display: block; }
+
 main .m_top .t_left .pic_box .picList ul .active { border-color: #008BE4; }
+
 main .m_top .t_left .btn span { padding: 4px; border: 1px solid #ccc; border-radius: 2px; display: block; font-size: 12px; margin-right: 8px; cursor: pointer; }
+
 main .m_top .t_left .btn span i { font-style: normal; padding: 0 2px; }
+
 main .m_top .t_left .btn span label { cursor: pointer; }
+
 main .m_top .t_left .btn span:last-child:hover { background-color: #ccc; color: #fff; }
+
 main .m_top .t_left .btn .clearFix input { margin: 2px 2px 0 0; }
+
 main .m_top .t_middle { border: 1px solid #ccc; border-right: none; }
+
 main .m_top .t_middle h2 { width: 580px; font-size: 18px; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 16px 20px; color: #000; }
+
 main .m_top .t_middle .price { background: transparent url("../img/details_bg.png") left top no-repeat; position: relative; }
+
 main .m_top .t_middle .price div { margin-bottom: 24px; position: relative; }
+
 main .m_top .t_middle .price div:first-child { padding-top: 30px; }
+
 main .m_top .t_middle .price div span { display: inline-block; width: 100px; text-align: right; }
+
 main .m_top .t_middle .price div #o_price { font-weight: bold; text-decoration: line-through; color: #666666; }
+
 main .m_top .t_middle .price div #n_price { font-size: 25px; top: -12px; position: absolute; font-weight: bolder; color: #CC0000; }
+
 main .m_top .t_middle .price div ul { display: inline-block; }
+
 main .m_top .t_middle .price div ul li { float: left; position: relative; top: 3px; color: #ccc; cursor: pointer; }
+
 main .m_top .t_middle .price div:last-child { position: absolute; right: 35px; top: 50%; transform: translateY(-50%); }
+
 main .m_top .t_middle .price div:last-child img { width: 100px; height: 100px; }
+
 main .m_top .t_middle .car_msg { padding: 0 30px; }
+
 main .m_top .t_middle .car_msg p { padding: 10px 0; }
+
 main .m_top .t_middle .car_msg p a, main .m_top .t_middle .car_msg p i { color: #D93600; font-weight: bold; }
+
 main .m_top .t_middle .car_msg p a:hover { text-decoration: underline; }
+
 main .m_top .t_middle .car_msg .place { border-bottom: 1px dashed #ccc; position: relative; }
+
 main .m_top .t_middle .car_msg .place span { padding: 8px 0; }
+
 main .m_top .t_middle .car_msg .place .place_search { display: inline-block; border: 1px solid #ccc; border-radius: 3px; padding: 4px; cursor: pointer; margin-right: 8px; }
+
 main .m_top .t_middle .car_msg .place .place_list { border: 2px solid #ccc; position: absolute; left: 55px; top: 0; border-radius: 5px; display: none; z-index: 999; background-color: #fff; }
+
 main .m_top .t_middle .car_msg .place .place_list p { background-color: #ccc; padding: 0; }
+
 main .m_top .t_middle .car_msg .place .place_list p span { display: inline-block; padding: 4px; background-color: #fff; font-size: 12px; color: #777; font-weight: normal; }
+
 main .m_top .t_middle .car_msg .place .place_list div { padding: 10px; background-color: #fff; }
+
 main .m_top .t_middle .car_msg .place .place_list div ul li { float: left; width: 80px; margin-bottom: 12px; }
+
 main .m_top .t_middle .car_msg .place .place_list div ul li span { padding: 4px; cursor: pointer; transition: all 0.2s ease; }
+
 main .m_top .t_middle .car_msg .place .place_list div ul li span:hover { background-color: #FF875A; color: #fff; }
+
 main .m_top .t_middle .car_msg .goods_color, main .m_top .t_middle .car_msg .goods_size { margin: 14px 8px; }
+
 main .m_top .t_middle .car_msg .goods_color span, main .m_top .t_middle .car_msg .goods_size span { float: left; line-height: 26px; margin-right: 5px; }
+
 main .m_top .t_middle .car_msg .goods_color ul, main .m_top .t_middle .car_msg .goods_size ul { float: left; }
+
 main .m_top .t_middle .car_msg .goods_color ul li, main .m_top .t_middle .car_msg .goods_size ul li { float: left; border: 2px solid #ccc; margin-right: 5px; line-height: 24px; cursor: pointer; padding: 0 8px; }
+
 main .m_top .t_middle .car_msg .goods_color ul .active, main .m_top .t_middle .car_msg .goods_size ul .active { border-color: #2F97F0; }
+
 main .m_top .t_middle .car_msg .goods_size ul li { padding: 0 8px; }
+
 main .m_top .t_middle .car_msg .addCar_btn { margin-bottom: 28px; }
+
 main .m_top .t_middle .car_msg .addCar_btn .input { width: 70px; float: left; margin-right: 10px; }
+
 main .m_top .t_middle .car_msg .addCar_btn .input input { float: left; width: 40px; height: 40px; line-height: 40px; border: 1px solid #ccc; border-right: none; text-align: center; font-weight: bold; font-size: 20px; }
+
 main .m_top .t_middle .car_msg .addCar_btn .input span { float: left; padding: 1.5px 2px; border: 1px solid #ccc; cursor: pointer; }
+
 main .m_top .t_middle .car_msg .addCar_btn .input #add { transform: rotate(180deg); }
+
 main .m_top .t_middle .car_msg .addCar_btn #addCar, main .m_top .t_middle .car_msg .addCar_btn #now_buy { float: left; transform: translateY(-3px); padding: 12px; font-size: 18px; color: #fff; font-weight: bold; background-color: #FF4400; margin-right: 10px; border: none; border-radius: 5px; outline: none; cursor: pointer; }
+
 main .m_top .t_middle .car_msg .addCar_btn #addCar span, main .m_top .t_middle .car_msg .addCar_btn #now_buy span { font-size: 18px; }
+
 main .m_top .t_middle .car_msg .addCar_btn #now_buy { background-color: #BA7538; }
+
 main .m_top .t_right { border: 1px solid #ccc; width: 190px; }
+
 main .m_top .t_right h3 { padding-left: 10px; line-height: 36px; border-bottom: 1px solid #ccc; background-color: #F5F5F5; }
+
 main .m_top .t_right div { padding: 10px; }
+
 main .m_top .t_right div p { margin-bottom: 16px; }
+
 main .m_top .t_right div p span { font-size: 30px; color: #CC0000; font-weight: bolder; }
+
 main .m_top .t_right div h5 { margin: 6px 0; font-weight: bold; }
+
 main .m_top .t_right div ul li { margin: 4px 8px; }
+
 main .m_top .t_right div ul li span { color: #CC0000; font-weight: bold; }
+
 main .m_top .t_right div dl { margin-top: 10px; }
+
 main .m_top .t_right div dl dt { margin-bottom: 8px; font-weight: bold; }
+
 main .m_top .t_right div dl dd { margin-bottom: 8px; }
+
 main .m_top .t_right div img { display: block; width: 129px; }
+
 main .m_middle .goods_msg_search { margin: 20px 0; }
+
 main .m_middle .goods_msg_search ul { border: 1px solid #ccc; display: inline-block; }
+
 main .m_middle .goods_msg_search ul li { float: left; padding: 12px 34px; border-left: 1px solid #ccc; border-right: 1px solid #ccc; font-size: 14px; cursor: pointer; }
+
 main .m_middle .goods_msg_search ul .active { border: 2px solid #fff; border-top-color: #2F97F0; padding: 10px 32px; }
+
 main .m_middle div { margin-bottom: 14px; }
+
 main .m_middle div h3 { font-size: 16px; padding: 8px; border-bottom: 2px solid #2F97F0; }
+
 main .m_bottom { margin-bottom: 20px; }
+
 main .m_bottom h2 { font-size: 16px; padding: 8px; border-bottom: 2px solid #2F97F0; margin-bottom: 8px; }
+
 main .m_bottom ul li { float: left; border-right: 1px solid #ccc; padding: 5px; }
+
 main .m_bottom ul li:last-child { border-right: none; }
+
 main .m_bottom ul li img { width: 120px; height: 120px; display: block; position: relative; left: 50%; transform: translateX(-50%); }
+
 main .m_bottom a, main .m_bottom p { display: block; margin: 8px 0; width: 228px; text-align: center; }
+
 main .m_bottom a { transition: all 0.2s ease; }
+
 main .m_bottom a:hover { color: #2F97F0; text-decoration: underline; }
+
 main .m_bottom p { font-weight: bold; color: #CC0000; }
 
 footer .f_top { padding: 180px 0 26px 0; background: #F4F3F3 url("../img/f_top.png") center 35px no-repeat; }
-footer .f_top .f_left { margin-right: 50px; }
-footer .f_top .f_left img { display: block; }
-footer .f_top .f_left p { text-align: center; }
-footer .f_top .f_middle ul li { float: left; padding: 0 32px; border-right: 1px solid #EAEAEA; }
-footer .f_top .f_middle ul li dl dt { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
-footer .f_top .f_middle ul li dl dd { padding-bottom: 20px; font-size: 16px; }
-footer .f_top .f_middle ul li dl dd a { color: #535353; }
-footer .f_top .f_middle ul li dl dd a:hover { text-decoration: underline; }
-footer .f_top .f_middle ul li dl dd button { padding: 10px 20px; background-color: #F4F3F3; border: 1px solid #535353; border-radius: 4px; outline: none; cursor: pointer; }
-footer .f_top .f_middle ul li:last-child { border-right: none; }
-footer .f_top .f_right { margin-right: 50px; }
-footer .f_top .f_right p { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
-footer .f_top .f_right span { padding: 10px 20px 10px 0; font-size: 45px; }
-footer .f_top .f_right span:nth-child(2) { color: #5CC349; }
-footer .f_top .f_right span:last-child { color: #F5A71F; }
-footer .f_bottom { margin-top: 35px; }
-footer .f_bottom ul li { float: left; padding-right: 52px; font-size: 14px; }
-footer .f_bottom p { margin: 20px; text-align: center; }
-footer .f_bottom a { transition: color 0.4s linear; }
-footer .f_bottom a:hover { color: #f00; text-decoration: underline; }
 
-/*# sourceMappingURL=details.css.map */
+footer .f_top .f_left { margin-right: 50px; }
+
+footer .f_top .f_left img { display: block; }
+
+footer .f_top .f_left p { text-align: center; }
+
+footer .f_top .f_middle ul li { float: left; padding: 0 32px; border-right: 1px solid #EAEAEA; }
+
+footer .f_top .f_middle ul li dl dt { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+
+footer .f_top .f_middle ul li dl dd { padding-bottom: 20px; font-size: 16px; }
+
+footer .f_top .f_middle ul li dl dd a { color: #535353; }
+
+footer .f_top .f_middle ul li dl dd a:hover { text-decoration: underline; }
+
+footer .f_top .f_middle ul li dl dd button { padding: 10px 20px; background-color: #F4F3F3; border: 1px solid #535353; border-radius: 4px; outline: none; cursor: pointer; }
+
+footer .f_top .f_middle ul li:last-child { border-right: none; }
+
+footer .f_top .f_right { margin-right: 50px; }
+
+footer .f_top .f_right p { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+
+footer .f_top .f_right span { padding: 10px 20px 10px 0; font-size: 45px; }
+
+footer .f_top .f_right span:nth-child(2) { color: #5CC349; }
+
+footer .f_top .f_right span:last-child { color: #F5A71F; }
+
+footer .f_bottom { margin-top: 35px; }
+
+footer .f_bottom ul li { float: left; padding-right: 52px; font-size: 14px; }
+
+footer .f_bottom p { margin: 20px; text-align: center; }
+
+footer .f_bottom a { transition: color 0.4s linear; }
+
+footer .f_bottom a:hover { color: #f00; text-decoration: underline; }

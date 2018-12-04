@@ -55,10 +55,12 @@ $(function() {
     checkSignIn();
 
     $('.a_quit').click(function() {
+    	Cookie.remove('shopCar');
         Cookie.remove('username');
         $('.before').css('display', 'block');
         $('.after').css('display', 'none');
         $('.a_user').text('');
+        location.href='../index.html';
     });
 
 	//渲染页面

@@ -1,88 +1,209 @@
 header { background-color: #F9F9F9; border-bottom: 1px solid #ccc; }
+
 header .h_left { padding: 12px 0; color: #999A9C; }
+
 header .h_right .before { padding: 5px 0; }
+
 header .h_right .before li { float: left; padding: 6px; margin-right: 20px; }
+
 header .h_right .before li a:hover { text-decoration: underline; }
+
 header .h_right .before li:first-child { border: 1px solid #2F97F0; border-radius: 4px; }
+
 header .h_right .before li:first-child a { color: #2F97F0; }
+
 header .h_right .after { display: none; padding: 5px 0; }
+
 header .h_right .after li { float: left; padding: 6px; margin-right: 20px; }
+
 header .h_right .after li a:hover { text-decoration: underline; }
+
 header .h_right .after li:last-child { cursor: pointer; }
+
 header .h_right .after .a_user { font-weight: bold; color: red; }
 
+nav .n_top .n_left { float: left; }
+
+nav .n_top .n_left #logo { display: inline-block; width: 225px; height: 100px; text-indent: -9999px; background: transparent url("../img/logo.png") left center no-repeat; margin-right: 170px; }
+
+nav .n_top .n_middle { margin-top: 30px; }
+
+nav .n_top .n_middle #n_search { border-radius: 20px; border: 2px solid #2F97F0; padding: 2px; margin-bottom: 2px; }
+
+nav .n_top .n_middle #n_search input { width: 300px; border: none; line-height: 28px; border-radius: 15px; padding-left: 20px; outline: none; }
+
+nav .n_top .n_middle #n_search button { border: none; color: #fff; background-color: #2F97F0; line-height: 28px; padding: 0 20px; border-radius: 15px; outline: none; cursor: pointer; }
+
+nav .n_top .n_middle #n_hot span { float: left; }
+
+nav .n_top .n_middle #n_hot ul li { float: left; margin-right: 5px; }
+
+nav .n_top .n_middle #n_hot ul li a { color: #555; }
+
+nav .n_top .n_middle #n_hot ul li a:hover { color: #f00; }
+
+nav .n_top .n_right { float: right; }
+
+nav .n_top .n_right div { display: inline-block; margin-right: 8px; margin-top: 30px; }
+
+nav .n_top .n_right div a { display: inline-block; padding: 10px; line-height: 20px; background-color: #FAFAFA; color: #777; }
+
+nav .n_bottom { background-color: #2F97F0; }
+
+nav .n_bottom ul li { float: left; }
+
+nav .n_bottom ul li:first-child { background-color: #1280DD; }
+
+nav .n_bottom ul li:hover { background-color: #1280DD; }
+
+nav .n_bottom ul li:last-child { float: right; }
+
+nav .n_bottom ul li:last-child:hover { text-decoration: underline; }
+
+nav .n_bottom ul li a { line-height: 36px; font-size: 16px; color: #fff; padding: 0 14px; }
+
+nav .n_bottom ul li a span { display: inline-block; font-size: 20px; line-height: 20px; transform: translate(-4px, 2px); }
+
 main .m_nav { padding: 14px 0; }
+
 main .m_nav ul { display: inline-block; transform: translateY(2px); }
+
 main .m_nav ul li { float: left; }
+
 main .m_nav ul li span { font-size: 12px; }
+
 main .m_filtrate { background-color: #F7F7F7; border: 1px solid #D7D7D7; margin-bottom: 16px; }
+
 main .m_filtrate dl dd, main .m_filtrate dl dt { float: left; padding: 10px; border-right: 1px solid #D7D7D7; font-size: 14px; }
+
 main .m_filtrate dl dd input, main .m_filtrate dl dt input { width: 40px; height: 16px; outline: none; text-align: center; }
+
 main .m_filtrate dl dd button, main .m_filtrate dl dt button { border: 1px solid #ccc; background-color: transparent; margin-left: 5px; border-radius: 2px; transform: translateY(2px); outline: none; cursor: pointer; }
+
 main .m_filtrate dl dd { cursor: pointer; }
+
 main .m_filtrate dl dd:hover { background-color: #fff; color: #26C9FF; }
+
 main .m_filtrate dl dd:hover .iconfont { color: #f00; }
+
 main .m_filtrate dl dd:hover button { color: #26C9FF; }
+
 main .m_filtrate dl dd:hover button:hover { color: #555; }
+
 main .m_filtrate dl dd:last-child { cursor: default; padding: 8px; }
+
 main .m_filtrate dl .active { color: #26C9FF; background-color: #fff; }
+
 main .m_filtrate dl .active .iconfont { color: #f00; }
+
 main .m_filtrate .m_right { padding-top: 6px; }
+
 main .m_filtrate .m_right span { padding: 4px; color: #26C9FF; border: 1px solid #ccc; cursor: pointer; margin-right: 5px; background-color: #fff; display: inline-block; }
+
 main .m_filtrate .m_right span:hover { border: 1px solid #f00; background-color: #00f; color: #fff; }
+
 main .m_goods .goodsList { position: relative; }
+
 main .m_goods .goods { border: 1px solid #ccc; display: inline-block; margin-bottom: 18px; height: 370px; overflow: hidden; transition: all 0.2s ease; margin-right: 8px; background-color: #fff; position: absolute; }
+
 main .m_goods .goods:hover { border: 3px solid #2F97F0; height: 407px; z-index: 9999; }
+
 main .m_goods .goods .goods_top { margin-top: 4px; }
+
 main .m_goods .goods .goods_top a { display: block; }
+
 main .m_goods .goods .goods_top a img { display: block; position: relative; left: 50%; transform: translateX(-50%); width: 220px; height: 220px; }
+
 main .m_goods .goods .goods_bottom { padding: 0 10px; background-color: rgba(255, 255, 255, 0.8); }
+
 main .m_goods .goods .goods_bottom .picList li { float: left; }
+
 main .m_goods .goods .goods_bottom .picList li img { display: block; width: 28px; height: 28px; margin: 4px 0; border: 1px solid #2F97F0; cursor: pointer; margin-right: 5px; }
+
 main .m_goods .goods .goods_bottom p { width: 270px; }
+
 main .m_goods .goods .goods_bottom p a { color: #555; transition: all 0.3s ease; }
+
 main .m_goods .goods .goods_bottom p a:hover { text-decoration: underline; color: #2F97F0; }
+
 main .m_goods .goods .goods_bottom .goodsMsg { margin: 10px 0 12px; }
+
 main .m_goods .goods .goods_bottom .goodsMsg strong { font-size: 14px; color: #C00015; }
+
 main .m_goods .goods .goods_bottom .goodsMsg span { font-size: 12px; line-height: 14px; color: #999999; text-decoration: line-through; }
+
 main .m_goods .goods .goods_bottom .goodsMsg ul li { float: left; margin-right: 4px; cursor: pointer; }
+
 main .m_goods .goods .goods_bottom .contrast { margin-bottom: 10px; }
+
 main .m_goods .goods .goods_bottom .contrast label { float: right; padding: 2px; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; }
+
 main .m_goods .goods .goods_bottom .contrast label input { float: left; }
+
 main .m_goods .goods .addCar { width: 100%; background-color: #2F97F0; text-align: center; padding: 8px 0; color: #fff; cursor: pointer; }
+
 main .m_goods .goods_page { margin: 36px; position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+
 main .m_goods .goods_page #first, main .m_goods .goods_page #last { width: 45px; height: 45px; line-height: 45px; text-align: center; border: 1px solid #ccc; margin: 0 15px; float: left; cursor: pointer; }
+
 main .m_goods .goods_page #first:hover, main .m_goods .goods_page #last:hover { border-color: #f00; color: #2F97F0; }
+
 main .m_goods .goods_page div { float: left; }
+
 main .m_goods .goods_page .prev, main .m_goods .goods_page .next { width: 50px; height: 45px; line-height: 45px; text-align: center; border: 1px solid #ccc; float: left; cursor: pointer; }
+
 main .m_goods .goods_page .prev:hover, main .m_goods .goods_page .next:hover { border-color: #f00; color: #2F97F0; }
+
 main .m_goods .goods_page #pages { float: left; }
+
 main .m_goods .goods_page #pages li { float: left; width: 45px; height: 45px; line-height: 45px; text-align: center; font-size: 18px; border: 1px solid #ccc; border-left: none; }
+
 main .m_goods .goods_page #pages li span { display: block; cursor: pointer; }
+
 main .m_goods .goods_page #pages .more { cursor: default; }
+
 main .m_goods .goods_page #pages .active { background-color: #2F97F0; color: #fff; }
+
 main .m_goods .goods_page #pages .hover { border-color: #f00; color: #2F97F0; }
 
 footer .f_top { padding: 180px 0 26px 0; background: #F4F3F3 url("../img/f_top.png") center 35px no-repeat; }
-footer .f_top .f_left { margin-right: 50px; }
-footer .f_top .f_left img { display: block; }
-footer .f_top .f_left p { text-align: center; }
-footer .f_top .f_middle ul li { float: left; padding: 0 32px; border-right: 1px solid #EAEAEA; }
-footer .f_top .f_middle ul li dl dt { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
-footer .f_top .f_middle ul li dl dd { padding-bottom: 20px; font-size: 16px; }
-footer .f_top .f_middle ul li dl dd a { color: #535353; }
-footer .f_top .f_middle ul li dl dd a:hover { text-decoration: underline; }
-footer .f_top .f_middle ul li dl dd button { padding: 10px 20px; background-color: #F4F3F3; border: 1px solid #535353; border-radius: 4px; outline: none; cursor: pointer; }
-footer .f_top .f_middle ul li:last-child { border-right: none; }
-footer .f_top .f_right { margin-right: 50px; }
-footer .f_top .f_right p { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
-footer .f_top .f_right span { padding: 10px 20px 10px 0; font-size: 45px; }
-footer .f_top .f_right span:nth-child(2) { color: #5CC349; }
-footer .f_top .f_right span:last-child { color: #F5A71F; }
-footer .f_bottom { margin-top: 35px; }
-footer .f_bottom ul li { float: left; padding-right: 52px; font-size: 14px; }
-footer .f_bottom p { margin: 20px; text-align: center; }
-footer .f_bottom a { transition: color 0.4s linear; }
-footer .f_bottom a:hover { color: #f00; text-decoration: underline; }
 
-/*# sourceMappingURL=goodsList.css.map */
+footer .f_top .f_left { margin-right: 50px; }
+
+footer .f_top .f_left img { display: block; }
+
+footer .f_top .f_left p { text-align: center; }
+
+footer .f_top .f_middle ul li { float: left; padding: 0 32px; border-right: 1px solid #EAEAEA; }
+
+footer .f_top .f_middle ul li dl dt { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+
+footer .f_top .f_middle ul li dl dd { padding-bottom: 20px; font-size: 16px; }
+
+footer .f_top .f_middle ul li dl dd a { color: #535353; }
+
+footer .f_top .f_middle ul li dl dd a:hover { text-decoration: underline; }
+
+footer .f_top .f_middle ul li dl dd button { padding: 10px 20px; background-color: #F4F3F3; border: 1px solid #535353; border-radius: 4px; outline: none; cursor: pointer; }
+
+footer .f_top .f_middle ul li:last-child { border-right: none; }
+
+footer .f_top .f_right { margin-right: 50px; }
+
+footer .f_top .f_right p { padding: 10px 0 20px 0; font-size: 18px; font-weight: bold; color: #525252; }
+
+footer .f_top .f_right span { padding: 10px 20px 10px 0; font-size: 45px; }
+
+footer .f_top .f_right span:nth-child(2) { color: #5CC349; }
+
+footer .f_top .f_right span:last-child { color: #F5A71F; }
+
+footer .f_bottom { margin-top: 35px; }
+
+footer .f_bottom ul li { float: left; padding-right: 52px; font-size: 14px; }
+
+footer .f_bottom p { margin: 20px; text-align: center; }
+
+footer .f_bottom a { transition: color 0.4s linear; }
+
+footer .f_bottom a:hover { color: #f00; text-decoration: underline; }
